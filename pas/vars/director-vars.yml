@@ -36,3 +36,10 @@ diego_cell/insecure_docker_registry_list: ""
 syslog_address: syslog.ragazzilab.com
 syslog_port: 514
 syslog_protocol: udp
+nsx_admin_password: ((nsx_admin_password))
+nsx_admin_user: ((nsx_admin_user))
+nsx_ca_cert: ((nsx_ca_cert))
+#vcenter_hostname: ((vcenter_hostname))
+#vcenter_userid: ((vcenter_userid))
+vcenter_password: ((vcenter_password))
+bosh_trusted_certs: ((wildcard-certificate))

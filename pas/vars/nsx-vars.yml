@@ -6,3 +6,5 @@ properties.nsx_auth_simple_nsx_api_user: admin
 properties.overlay_tz: tz-overlay
 properties.tier0_router: t0-core
 nsx_hostname: corensxmgr.ragazzilab.com
+properties_nsx_auth_simple_nsx_api_password.secret: ((nsx_admin_password))
+properties.nsx_api_ca_cert: ((nsx_ca_cert))
