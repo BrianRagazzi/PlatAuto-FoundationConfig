@@ -11,9 +11,8 @@ ntp: 192.168.1.1
 vsphere_vms_folder: /LAB/vm/BOSH/PAS/VMs/
 vcenter_hostname: corevcsa1.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
-opsman_ssh_public_key:
+opsman_host: om.pas.ragazzilab.com
+opsman_ssh.public_key: ((opsman_ssh.public_key))
 vcenter_password: ((vcenter_password))
-opsman_host: ((opsman_host))
-#opsman_ssh:
-#  public_key: ((opsman_ssh_public_key))
 opsman_ssh_password: ((opsman_ssh_password))
+pivnet-api-token: ((pivnet_token))
