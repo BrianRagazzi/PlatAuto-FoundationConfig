@@ -244,8 +244,6 @@ product-properties:
     value: ((smtp_auth_mechanism))
   .properties.smtp_enable_starttls_auto:
     value: ((smtp_enable_starttls_auto))
-  .properties.stack_migration_acknowledgement:
-    value: ((stack_migration_acknowledgement))
   .properties.syslog_drop_debug:
     value: ((syslog_drop_debug))
   .properties.syslog_metrics_to_syslog_enabled:
