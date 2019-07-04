@@ -1,0 +1,198 @@
+az-configuration:
+- name: AZ3
+  clusters:
+  - cluster: attic
+    resource_pool: PAS
+  iaas_configuration_guid: af252264c374470ae779
+- name: AZ2
+  clusters:
+  - cluster: attic
+    resource_pool: PAS
+  iaas_configuration_guid: af252264c374470ae779
+- name: AZ1
+  clusters:
+  - cluster: attic
+    resource_pool: PAS
+  iaas_configuration_guid: af252264c374470ae779
+- name: MGMT
+  clusters:
+  - cluster: attic
+    resource_pool: PAS-MGMT
+  iaas_configuration_guid: af252264c374470ae779
+iaas-configurations:
+- additional_cloud_properties: {}
+  bosh_disk_path: ((iaas-configurations_0_bosh_disk_path))
+  bosh_template_folder: ((iaas-configurations_0_bosh_template_folder))
+  bosh_vm_folder: ((iaas-configurations_0_bosh_vm_folder))
+  datacenter: ((iaas-configurations_0_datacenter))
+  disk_type: ((iaas-configurations_0_disk_type))
+  ephemeral_datastores_string: ((iaas-configurations_0_ephemeral_datastores_string))
+  name: ((iaas-configurations_0_name))
+  nsx_address: ((iaas-configurations_0_nsx_address))
+  nsx_ca_certificate: ((iaas-configurations_0_nsx_ca_certificate))
+  nsx_mode: ((iaas-configurations_0_nsx_mode))
+  nsx_networking_enabled: ((iaas-configurations_0_nsx_networking_enabled))
+  nsx_username: ((iaas-configurations_0_nsx_username))
+  persistent_datastores_string: ((iaas-configurations_0_persistent_datastores_string))
+  ssl_verification_enabled: ((iaas-configurations_0_ssl_verification_enabled))
+  vcenter_host: ((iaas-configurations_0_vcenter_host))
+  vcenter_username: ((iaas-configurations_0_vcenter_username))
+network-assignment:
+  network:
+    name: infrastructure
+  other_availability_zones: []
+  singleton_availability_zone:
+    name: MGMT
+networks-configuration:
+  icmp_checks_enabled: false
+  networks:
+  - name: infrastructure
+    subnets:
+    - iaas_identifier: PAS-INFRA
+      cidr: 10.16.21.0/24
+      dns: 192.168.100.50,192.168.100.150
+      gateway: 10.16.21.1
+      reserved_ip_ranges: 10.16.21.1-10.16.21.20
+      availability_zone_names:
+      - MGMT
+  - name: deployment
+    subnets:
+    - iaas_identifier: PAS-DEPLOYMENT
+      cidr: 10.16.22.0/24
+      dns: 192.168.100.50,192.168.100.150
+      gateway: 10.16.22.1
+      reserved_ip_ranges: 10.16.22.1-10.16.22.20
+      availability_zone_names:
+      - AZ1
+      - AZ2
+      - AZ3
+  - name: services
+    subnets:
+    - iaas_identifier: PAS-SERVICES
+      cidr: 10.16.23.0/24
+      dns: 192.168.100.50,192.168.100.150
+      gateway: 10.16.23.1
+      reserved_ip_ranges: 10.16.23.1-10.16.23.20
+      availability_zone_names:
+      - AZ1
+      - AZ2
+      - AZ3
+properties-configuration:
+  director_configuration:
+    blobstore_type: local
+    bosh_recreate_on_next_deploy: false
+    bosh_recreate_persistent_disks_on_next_deploy: false
+    database_type: internal
+    director_worker_count: 5
+    encryption: []
+    hm_emailer_options:
+      enabled: false
+    hm_pager_duty_options:
+      enabled: false
+    identification_tags: {}
+    job_configuration_on_tmpfs: false
+    keep_unreachable_vms: false
+    local_blobstore_options:
+      tls_enabled: true
+    ntp_servers_string: 192.168.100.50, 192.168.100.1
+    post_deploy_enabled: false
+    resurrector_enabled: true
+    retry_bosh_deploys: false
+    skip_director_drain: false
+  dns_configuration: []
+  security_configuration:
+    generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
+    opsmanager_root_ca_trusted_certs: true
+    trusted_certificates: |
+      -----BEGIN CERTIFICATE-----
+      MIIFtTCCBJ2gAwIBAgITKgAAAFzM6vACTG5UVwAAAAAAXDANBgkqhkiG9w0BAQsF
+      ADBSMRMwEQYKCZImiZPyLGQBGRYDY29tMRowGAYKCZImiZPyLGQBGRYKcmFnYXp6
+      aWxhYjEfMB0GA1UEAxMWcmFnYXp6aWxhYi1DT1JFQURDMS1DQTAeFw0xOTA1MDQy
+      MzM1NDBaFw0yMTA1MDMyMzM1NDBaMHoxCzAJBgNVBAYTAlVTMRQwEgYDVQQIEwtt
+      aXNzaXNzaXBwaTEQMA4GA1UEBxMHTWFkaXNvbjETMBEGA1UEChMKUmFnYXp6aUxh
+      YjEOMAwGA1UECxMFYXR0aWMxHjAcBgNVBAMTFXNzaC5wYXMubGFiMTMuY3NlLmxh
+      YjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJYthCBJC3Tk4nqTDlY3
+      T/VypjE8NrmyXt87PKOS9WVSumT6KzGy4WjLUxRvlWNbVti22xMcq4dxdic9AA25
+      prBEvZpxVSC0dnd3O0iiCd1uSeAHG0vgg27YcJ7sE1NrXogaWMRTaxNvoazM2SPu
+      N98e4PKa8PXmDDG/JFXP76hvPICPDLF9kqXGliIo0ecVRuPRedRtWQwdRv5+qKui
+      A9ZxfHkxR8XwJbpWOiRlQ7NkAVwenfzd2v0+D3H+zhjF/jkOkYuV+N77IJebhJao
+      CDfxz7hNZLmfLat5HoQThW51NmDRdJPD4Bw4GBqCpdNOiKMPBulWY9s4KBXadkdP
+      BFkCAwEAAaOCAlowggJWMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEF
+      BQcDATAjBgNVHREEHDAaggNwYXOCEyoucGFzLmxhYjEzLmNzZS5sYWIwHQYDVR0O
+      BBYEFDr0/Lnc9VaOYH/ZZg1O387RSUrDMB8GA1UdIwQYMBaAFGIlrr1LYLeq7sBW
+      LBhttnaHkzpCMIHYBgNVHR8EgdAwgc0wgcqggceggcSGgcFsZGFwOi8vL0NOPXJh
+      Z2F6emlsYWItQ09SRUFEQzEtQ0EsQ049Q09SRUFEQzEsQ049Q0RQLENOPVB1Ymxp
+      YyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24s
+      REM9cmFnYXp6aWxhYixEQz1jb20/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i
+      YXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIHLBggrBgEFBQcB
+      AQSBvjCBuzCBuAYIKwYBBQUHMAKGgatsZGFwOi8vL0NOPXJhZ2F6emlsYWItQ09S
+      RUFEQzEtQ0EsQ049QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNl
+      cnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9cmFnYXp6aWxhYixEQz1jb20/Y0FD
+      ZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3Jp
+      dHkwIQYJKwYBBAGCNxQCBBQeEgBXAGUAYgBTAGUAcgB2AGUAcjANBgkqhkiG9w0B
+      AQsFAAOCAQEAMsYObMRYmiCxWUOzpEpUK6rfhnPJatpKfiSxJJNj16JhV0chbQ9b
+      vKgcNFi19qwIlQ9mGag5PoGbUjhpSNYlDZ7KwfPycAdP2iAElL4acB72ZqcvK6Rm
+      gHfftqalXT+qBQKDO26m+Qlr3UsHz4hujAMMgBzZcGkAoYvpa3i8yYIiWdOsQxlF
+      teiu4OI3073GBUNSNQHr+NtOahirqNk/r0dUfY4f82wn20CXzGEMYACm9YE3U6o3
+      V3SO6FelrC0Kl3/puSi8SiOa4og53rKKTBA8XzeQfV6P18W0xWDoStY092j72aUR
+      VmssjwtWQqMLVCcdSqY5eBWfEsvwIMW8CA==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDfzCCAmegAwIBAgIQLjYGHcW8Ia1JvAwqn7vuFDANBgkqhkiG9w0BAQUFADBS
+      MRMwEQYKCZImiZPyLGQBGRYDY29tMRowGAYKCZImiZPyLGQBGRYKcmFnYXp6aWxh
+      YjEfMB0GA1UEAxMWcmFnYXp6aWxhYi1DT1JFQURDMS1DQTAeFw0xNDEyMTgxOTMz
+      MzlaFw0yNDEyMTgxOTQzMzlaMFIxEzARBgoJkiaJk/IsZAEZFgNjb20xGjAYBgoJ
+      kiaJk/IsZAEZFgpyYWdhenppbGFiMR8wHQYDVQQDExZyYWdhenppbGFiLUNPUkVB
+      REMxLUNBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA+NGGixl/a5DB
+      nv1RKMJz32aXvgYbcg03oEwdAQlM3ENvoGaC6ESFnki6izBl5tQ9EnUBvirq2LPZ
+      RL/1a8Ah2RgDD1pdL4h3Wv2EY/8zqlK26OxYOapdysqWLojPUkdNfyyBw9W1dCk7
+      YDwoC55aQVkmL83KIOSQP/GEc0E25CXKkA8scktXRBqUSL8VNqb4wH4UEXvIgK+x
+      NVSR0bNjNdcaXBiwLQov7Dk7+9zZ4pXudogNh4mmGPfrgYnskc7TscFl1ymNOQ8+
+      l412RqrO7/83mGbpf7LT+rGXXZWhY0CtqRew3PgljhBnuA2K/C+T8p05XA/GSETb
+      CpskdZazFQIDAQABo1EwTzALBgNVHQ8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAd
+      BgNVHQ4EFgQUYiWuvUtgt6ruwFYsGG22doeTOkIwEAYJKwYBBAGCNxUBBAMCAQAw
+      DQYJKoZIhvcNAQEFBQADggEBAJDjTjVQXJJ51W+lefpuunpzT0EPDM3I1+/A94yl
+      FzKX4FlONkYCj/7wNtZ+B65a3CihOf0/q0hqmcHKiu6Ldt5tTYL3hvWs7l9m17Jg
+      1M9IpuOUuEPo0v9qUn45J+42Of1L1/cSq5Q1mM59oN1UmNy9ik9DyS/yKDVdLGLo
+      gL5nn4UebvZ2ofiAEQQgKCVox3HXseQ5ZQHU50S/7UYoOySIwdEwcdZhrQ8iNvNE
+      Y+ZO5iSv4zVA1BuzFSa1pq6RhOm4XRt2s09FZOIpWtMqbixUil5ddYmWpIGkpGGy
+      SyIq7aD3tt6rkNFhFiPKgOC4lRmjNlLNKzJ8zJNAd6wEcMk=
+      -----END CERTIFICATE-----
+  syslog_configuration:
+    address: syslog.ragazzilab.com
+    enabled: true
+    forward_debug_logs: false
+    port: 514
+    tls_enabled: false
+    transport_protocol: udp
+resource-configuration:
+  compilation:
+    instances: automatic
+    instance_type:
+      id: automatic
+  director:
+    instances: automatic
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+vmextensions-configuration:
+- name: pcf_web_vm_extension
+  cloud_properties:
+    nsxt:
+      lb:
+        server_pools:
+        - name: pas-web-pool
+- name: pcf_ssh_vm_extension
+  cloud_properties:
+    nsxt:
+      lb:
+        server_pools:
+        - name: pas-ssh-pool
+- name: pcf_tcp_vm_extension
+  cloud_properties:
+    nsxt:
+      lb:
+        server_pools:
+        - name: pas-tcp-pool
+
