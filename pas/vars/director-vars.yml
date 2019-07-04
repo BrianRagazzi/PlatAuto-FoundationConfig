@@ -32,7 +32,7 @@ vsphere_vms_folder: BOSH/PAS/VMs/
 vcenter_hostname: corevcsa1.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
 nsx_hostname: corensxmgr.ragazzilab.com
-diego_cell/insecure_docker_registry_list: ""
+diego_cell/insecure_docker_registry_list: "harbor.ragazzilab.com"
 syslog_address: syslog.ragazzilab.com
 syslog_port: 514
 syslog_protocol: udp
