@@ -1,0 +1,4 @@
+# Used in post-deploy configuration update
+
+install-hwc-buildpack_post_deploy_state: off
+smoke_tests_windows_post_deploy_state: off

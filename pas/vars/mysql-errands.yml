@@ -1,0 +1,5 @@
+delete-all-service-instances-and-deregister-broker_pre_delete_state: default
+register-broker_post_deploy_state: off
+smoke-tests_post_deploy_state: off
+upgrade-all-service-instances_post_deploy_state: default
+validate-before-upgrade-instances_post_deploy_state: default

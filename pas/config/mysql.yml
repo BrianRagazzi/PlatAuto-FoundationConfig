@@ -5,7 +5,9 @@ network-properties:
   service_network:
     name: ((service_network_name))
   other_availability_zones:
-  - name: ((singleton_availability_zone))
+  - name: ((az1_name))
+  - name: ((az2_name))
+  - name: ((az3_name))
   singleton_availability_zone:
     name: ((singleton_availability_zone))
 product-properties:
@@ -34,7 +36,7 @@ product-properties:
   .properties.mysql_metrics_frequency:
     value: ((mysql_metrics_frequency))
   .properties.plan1_selector:
-    value: single_node
+    value: single-node
   .properties.plan1_selector.single_node.access_dropdown:
     value: ((plan1_selector/single_node/access_dropdown))
   .properties.plan1_selector.single_node.az_multi_select:
@@ -46,7 +48,7 @@ product-properties:
   .properties.plan1_selector.single_node.paid_plan:
     value: ((plan1_selector/single_node/paid_plan))
   .properties.plan2_selector:
-    value: single_node
+    value: single-node
   .properties.plan2_selector.single_node.access_dropdown:
     value: ((plan2_selector/single_node/access_dropdown))
   .properties.plan2_selector.single_node.az_multi_select:
@@ -58,7 +60,7 @@ product-properties:
   .properties.plan2_selector.single_node.paid_plan:
     value: ((plan2_selector/single_node/paid_plan))
   .properties.plan3_selector:
-    value: single_node
+    value: single-node
   .properties.plan3_selector.single_node.access_dropdown:
     value: ((plan3_selector/single_node/access_dropdown))
   .properties.plan3_selector.single_node.az_multi_select:
@@ -86,7 +88,15 @@ product-properties:
   .properties.simultaneous_upgrades:
     value: ((simultaneous_upgrades))
   .properties.syslog_migration_selector:
-    value: disabled
+    value: enabled
+  .properties.syslog_migration_selector.enabled.address:
+    value: ((syslog_address))
+  .properties.syslog_migration_selector.enabled.port:
+    value: ((syslog_port))
+  .properties.syslog_migration_selector.enabled.tls_enabled:
+    value: ((syslog_tls_enabled))
+  .properties.syslog_migration_selector.enabled.transport_protocol:
+    value: ((syslog_protocol))
   .properties.userstat:
     value: ((userstat))
   .properties.wait_timeout:

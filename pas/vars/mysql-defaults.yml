@@ -6,12 +6,16 @@ enable_read_only_admin: false
 enable_secure_binding_credentials: false
 global_service_instance_limit: 50
 local_infile: false
+deprecated_bindings_string: X
 mysql_metrics_frequency: 30
 plan1_selector/single_node/access_dropdown: enable
 plan1_selector/single_node/description: This plan provides a small dedicated MySQL
   instance.
 plan1_selector/single_node/name: db-small
 plan1_selector/single_node/paid_plan: false
+plan2_selector/single_node/access_dropdown: enable
+plan2_selector/single_node/description: This plan provides a medium dedicated MySQL
+  instance.
 plan2_selector/single_node/access_dropdown: enable
 plan2_selector/single_node/description: This plan provides a medium dedicated MySQL
   instance.
