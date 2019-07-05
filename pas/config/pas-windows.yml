@@ -18,7 +18,7 @@ product-properties:
   .properties.smoke_tests_windows:
     value: on_demand
   .properties.system_logging:
-    value: disable
+    value: enable
   .properties.system_logging.enable.syslog_host:
     value: ((syslog_address))
   .properties.system_logging.enable.syslog_port:
