@@ -1,0 +1,41 @@
+product-name: pas-windows
+network-properties:
+  network:
+    name: ((network_name))
+  other_availability_zones:
+  - name: ((az1_name))
+  - name: ((az2_name))
+  - name: ((az3_name))
+  singleton_availability_zone:
+    name: ((singleton_availability_zone))
+product-properties:
+  .properties.bosh_ssh_enabled:
+    value: ((bosh_ssh_enabled))
+  .properties.kms:
+    value: disable
+  .properties.rdp_enabled:
+    value: ((rdp_enabled))
+  .properties.smoke_tests_windows:
+    value: on_demand
+  .properties.system_logging:
+    value: disable
+  .properties.system_logging.enable.syslog_host:
+    value: ((syslog_address))
+  .properties.system_logging.enable.syslog_port:
+    value: ((syslog_port))
+  .properties.system_logging.enable.syslog_protocol:
+    value: ((syslog_protocol))
+  .properties.system_metrics_enabled:
+    value: ((system_metrics_enabled))
+  .properties.windows_admin_password:
+    value: use_default
+resource-config:
+  windows_diego_cell:
+    instance_type:
+      id: ((windows_diego_cell_instance_type))
+    instances: ((windows_diego_cell_instances))
+errand-config:
+  install-hwc-buildpack:
+    post-deploy-state: ((install-hwc-buildpack_post_deploy_state))
+  smoke_tests_windows:
+    post-deploy-state: ((smoke_tests_windows_post_deploy_state))
