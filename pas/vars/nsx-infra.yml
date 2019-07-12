@@ -35,7 +35,9 @@ t1-logical-routers:
     - logical_switch_name: pas-dynsvcs
       router_port_cidr: 10.16.24.1/24
 
-load-balancer:
+load-balancers:
+- name: pas-lb  # Name of Load-Balancer
+  t1_name: T1-PAS-DEPLOY # T1 to attach LB to
   monitors:
   - name: pas-web-monitor
     port: 8080
@@ -72,8 +74,6 @@ load-balancer:
     pool-name: pas-ssh-pool
     port: 2222
     virtual_ip: 192.168.105.22
-  display_name: pas-lb  # Name of Load-Balancer
-  t1_name: T1-PAS-DEPLOY # T1 to attach LB to
 
 t0-nat-rules:
 # must have a name
@@ -120,12 +120,16 @@ t0-nat-rules:
   trans: 192.168.105.5
   priority: 1002
 
-ip-block:
+ip-blocks:
 - name: PAS-Orgs-Block
   cidr: 10.19.0.0/16
   description: "Networks for new Orgs are allocated from this block"
+- name: test-block
+  cidr: 10.20.1.0/24
+  description: "testing block"
 
-ip-pool:
+
+ip-pools:
 - name: PAS-FLOATING-IP-POOL
   cidr: 192.168.105.0/24
   description: "IP pool that provides 1 public IP for each Cloud Foundry Org"
