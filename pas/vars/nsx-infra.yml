@@ -1,0 +1,128 @@
+---
+logical-switches:
+- name: pas-infra
+  transport_zone_name: tz-overlay
+- name: pas-deploy
+  transport_zone_name: tz-overlay
+- name: pas-services
+  transport_zone_name: tz-overlay
+- name: pas-dynsvcs
+  transport_zone_name: tz-overlay
+
+t1-logical-routers:
+- name: "T1-PAS-INFRA"
+  t0_name: "t0-core"
+  edgecluster_name: ""
+  downlink:
+    logical_switch_name: "pas-infra"
+    router_port_cidr: "10.16.21.1/24"
+- name: T1-PAS-DEPLOY
+  t0_name: t0-core
+  edgecluster_name: "edgecluster1"
+  downlink:
+    logical_switch_name: pas-deploy
+    router_port_cidr: 10.16.22.1/24
+- name: T1-PAS-SERVICES
+  t0_name: t0-core
+  edgecluster_name: ""
+  downlink:
+    logical_switch_name: pas-services
+    router_port_cidr: 10.16.23.1/24
+- name: T1-PAS-DYNSVCS
+  t0_name: t0-core
+  edgecluster_name: ""
+  downlink:
+    logical_switch_name: pas-dynsvcs
+    router_port_cidr: 10.16.24.1/24
+
+load-balancer:
+  monitors:
+    web-monitor:
+      display_name: pas-web-monitor
+      port: 8080
+      protocol: LbHttpMonitor
+      url: /health
+    tcp-monitor:
+      display_name: pas-tcp-monitor
+      port: 80
+      protocol: LbHttpMonitor
+      url: /health
+    ssh-monitor:
+      display_name: pas-ssh-monitor
+      port: 2222
+      protocol: LbTcpMonitor
+      url: /
+  server-pools:
+    web-pool:
+      display_name: pas-web-pool
+      monitor_name: pas-web-monitor
+      translation_mode: LbSnatAutoMap
+    tcp-pool:
+      display_name: pas-tcp-pool
+      monitor_name: pas-tcp-monitor
+      translation_mode: Transparent
+    ssh-pool:
+      display_name: pas-ssh-pool
+      monitor_name: pas-ssh-monitor
+      translation_mode: Transparent
+  virtual-servers:  #Virtual servers to create, each will be attached to the LB
+    web-vs:
+      display_name: pas-web-vs
+      pool-name: pas-web-pool
+      port: 443
+      virtual_ip: 192.168.105.22
+    tcp-vs:
+      display_name: pas-tcp-vs
+      pool-name: pas-tcp-pool
+      port: 5900
+      virtual_ip: 192.168.105.22
+    ssh-vs:
+      display_name: pas-ssh-vs
+      pool-name: pas-ssh-pool
+      port: 2222
+      virtual_ip: 192.168.105.22
+  display_name: pas-lb  # Name of Load-Balancer
+  t1_name: T1-PAS-DEPLOY # T1 to attach LB to
+
+t0-nat-rules:
+  opsman-dnat:
+    t0_name: t0-core
+    action: DNAT
+    source: Any
+    dest: 192.168.105.20
+    trans: 10.16.21.20
+    priority: 1002
+  opsman-snat:
+    t0_name: t0-core
+    action: SNAT
+    source: 10.16.21.20
+    dest: Any
+    trans: 192.168.105.20
+    priority: 1002
+  infra-snat:
+    t0_name: t0-core
+    action: SNAT
+    source: 10.16.21.0/24
+    dest: Any
+    trans: 192.168.105.4
+    priority: 1002
+  deply-snat:
+    t0_name: t0-core
+    action: SNAT
+    source: 10.16.22.0/24
+    dest: Any
+    trans: 192.168.105.5
+    priority: 1002
+
+ip-block:
+  display_name: PAS-Orgs-Block
+  cidr: 10.19.0.0/16
+  description: "Networks for new Orgs are allocated from this block"
+
+ip-pool:
+  display_name: PAS-FLOATING-IP-POOL
+  cidr: 192.168.105.0/24
+  description: "IP pool that provides 1 public IP for each Cloud Foundry Org"
+  gateway: 192.168.105.1
+  range: 192.168.105.97-192.168.105.127
+  dns_servers: 192.168.100.50,192.168.100.150
