@@ -1,5 +1,5 @@
 ---
-logical-switches:
+logical_switches:
 - name: pas-infra
   transport_zone_name: tz-overlay
 - name: pas-deploy
@@ -9,7 +9,7 @@ logical-switches:
 - name: pas-dynsvcs
   transport_zone_name: tz-overlay
 
-t1-logical-routers:
+t1_logical_routers:
 - name: "T1-PAS-INFRA"
   t0_name: "t0-core"
   edgecluster_name: ""
@@ -35,7 +35,7 @@ t1-logical-routers:
     - logical_switch_name: pas-dynsvcs
       router_port_cidr: 10.16.24.1/24
 
-load-balancers:
+load_balancers:
 - name: pas-lb  # Name of Load-Balancer
   t1_name: T1-PAS-DEPLOY # T1 to attach LB to
   monitors:
@@ -51,7 +51,7 @@ load-balancers:
     port: 2222
     protocol: LbTcpMonitor
     url: /
-  server-pools:
+  server_pools:
   - name: pas-web-pool
     monitor_name: pas-web-monitor
     translation_mode: LbSnatAutoMap
@@ -61,21 +61,21 @@ load-balancers:
   - name: pas-ssh-pool
     monitor_name: pas-ssh-monitor
     translation_mode: Transparent
-  virtual-servers:  #Virtual servers to create, each will be attached to the LB
+  virtual_servers:  #Virtual servers to create, each will be attached to the LB
   - name: pas-web-vs
-    pool-name: pas-web-pool
+    pool_name: pas-web-pool
     port: 443
     virtual_ip: 192.168.105.22
   - name: pas-tcp-vs
-    pool-name: pas-tcp-pool
+    pool_name: pas-tcp-pool
     port: 5900
     virtual_ip: 192.168.105.22
   - name: pas-ssh-vs
-    pool-name: pas-ssh-pool
+    pool_name: pas-ssh-pool
     port: 2222
     virtual_ip: 192.168.105.22
 
-t0-nat-rules:
+t0_nat_rules:
 # must have a name
 - name: opsman-dnat # DNAT to reach Ops Mgr
   t0_name: t0-core
@@ -120,7 +120,7 @@ t0-nat-rules:
   trans: 192.168.105.5
   priority: 1002
 
-ip-blocks:
+ip_blocks:
 - name: PAS-Orgs-Block
   cidr: 10.19.0.0/16
   description: "Networks for new Orgs are allocated from this block"
@@ -129,7 +129,7 @@ ip-blocks:
   description: "testing block"
 
 
-ip-pools:
+ip_pools:
 - name: PAS-FLOATING-IP-POOL
   cidr: 192.168.105.0/24
   description: "IP pool that provides 1 public IP for each Cloud Foundry Org"
