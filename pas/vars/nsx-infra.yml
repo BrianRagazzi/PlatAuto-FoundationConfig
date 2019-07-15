@@ -1,4 +1,7 @@
 ---
+nsxt_admin_username: admin
+nsxt_admin_password: ((nsxt_admin_password))
+
 logical_switches:
 - name: pas-infra
   transport_zone_name: tz-overlay
