@@ -1,6 +1,7 @@
 ---
 nsxt_admin_username: admin
 nsxt_admin_password: ((nsx_admin_password))
+nsxt_manager: https://corensxmgr.ragazzilab.com
 
 logical_switches:
 - name: pas-infra
