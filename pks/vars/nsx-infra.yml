@@ -92,3 +92,5 @@ ip_pools:
   gateway: 192.168.105.1
   range: 192.168.105.64-192.168.105.96
   dns_servers: 192.168.100.50,192.168.100.150
+
+load-balancers:
