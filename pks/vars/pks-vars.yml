@@ -28,8 +28,8 @@ properties_network_selector_nsx_t0-router-name: t0-core
 properties_network_selector_nsx_vcenter_cluster: attic
 
 properties_uaa: ldap
-properties_uaa_ldap_credentials.identity: CN=svcacct AD. Bind,OU=Service Accounts,DC=ragazzilab,DC=com
-properties_uaa_ldap_credentials.password: ((properties_uaa_ldap_credentials_password))
+properties_uaa_ldap_credentials_identity: CN=svcacct AD. Bind,OU=Service Accounts,DC=ragazzilab,DC=com
+properties_uaa_ldap_credentials_password: ((properties_uaa_ldap_credentials_password))
 properties_uaa_ldap_email_domains: ragazzilab.com
 properties_uaa_ldap_group_search_base: OU=Security Groups,DC=ragazzilab,DC=com
 properties_uaa_ldap_search_base: OU=User Accounts,DC=ragazzilab,DC=com
