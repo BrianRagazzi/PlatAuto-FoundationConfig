@@ -188,8 +188,8 @@ product-properties:
     value: ((properties_uaa))
   .properties.uaa.ldap.credentials:
     value:
-      identity: ((properties_uaa_ldap_credentials.identity))
-      password: ((properties_uaa_ldap_credentials.password))
+      identity: ((properties_uaa_ldap_credentials_identity))
+      password: ((properties_uaa_ldap_credentials_password))
   .properties.uaa.ldap.email_domains:
     value: ((properties_uaa_ldap_email_domains))
   .properties.uaa.ldap.external_groups_whitelist:
