@@ -21,3 +21,4 @@ syslog_address: syslog.ragazzilab.com
 syslog_port: 514
 syslog_protocol: udp
 syslog_tls_enabled: false
+global_recipient_email: mysql@ragazzilab.com
