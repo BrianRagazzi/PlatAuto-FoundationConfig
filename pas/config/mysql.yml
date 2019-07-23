@@ -1,4 +1,4 @@
-product-name: pivotal-mysql
+.activeproduct-name: pivotal-mysql
 network-properties:
   network:
     name: ((network_name))
@@ -37,15 +37,15 @@ product-properties:
     value: ((mysql_metrics_frequency))
   .properties.plan1_selector:
     value: single-node
-  .properties.plan1_selector.single_node.access_dropdown:
+  .properties.plan1_selector.active.access_dropdown:
     value: ((plan1_selector/single_node/access_dropdown))
-  .properties.plan1_selector.single_node.az_multi_select:
+  .properties.plan1_selector.active.az_multi_select:
     value: ((plan1_selector/single_node/az_multi_select))
-  .properties.plan1_selector.single_node.description:
+  .properties.plan1_selector.active.description:
     value: ((plan1_selector/single_node/description))
-  .properties.plan1_selector.single_node.name:
+  .properties.plan1_selector.active.name:
     value: ((plan1_selector/single_node/name))
-  .properties.plan1_selector.single_node.paid_plan:
+  .properties.plan1_selector.active.paid_plan:
     value: ((plan1_selector/single_node/paid_plan))
   .properties.plan2_selector:
     value: single-node
