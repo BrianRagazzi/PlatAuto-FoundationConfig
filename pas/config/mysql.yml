@@ -1,4 +1,4 @@
-.activeproduct-name: pivotal-mysql
+product-name: pivotal-mysql
 network-properties:
   network:
     name: ((network_name))
