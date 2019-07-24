@@ -1,10 +1,10 @@
-properties.container_ip_blocks_name: PAS-Orgs-Block
+properties.container_ip_blocks_name: PAS-container-IP-Block
 properties.container_ip_blocks_cidr: null
 properties.foundation_name: PAS
-properties.nsx_api_managers: corensxmgr.ragazzilab.com
+properties.nsx_api_managers: sc2-nsxmgr-01.caas.pez.pivotal.io
 properties.nsx_auth_simple_nsx_api_user: admin
 properties.overlay_tz: tz-overlay
-properties.tier0_router: t0-core
-nsx_hostname: corensxmgr.ragazzilab.com
+properties.tier0_router: T0-Router
+nsx_hostname: sc2-nsxmgr-01.caas.pez.pivotal.io
 properties_nsx_auth_simple_nsx_api_password.secret: ((nsx_admin_password))
 properties.nsx_api_ca_cert: ((nsx_ca_cert))
