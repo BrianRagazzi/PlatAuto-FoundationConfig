@@ -4,7 +4,7 @@ opsman_private_ip: 192.168.1.10
 opsman_netmask: 255.255.255.0
 vsphere_datastore: VxRail-Virtual-SAN-Datastore-9c7ab8af-b690-4d34-bfa0-add02b9bbcf4
 vsphere_datacenter: VxRail-Datacenter
-infrastructure_network: PAS-Infrastructure-T1
+infrastructure_network: PAS-Infrastructure-LS
 infrastructure_gateway: 192.168.1.1
 dns: 10.192.2.10,10.192.2.11
 ntp: time.svc.pivotal.io
