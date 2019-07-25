@@ -21,7 +21,7 @@ properties-configuration:
   director_configuration:
     ntp_servers_string: ((ntp))
     resurrector_enabled: true
-    post_deploy_enabled: false
+    post_deploy_enabled: true
   security_configuration:
     generate_vm_passwords: true
     opsmanager_root_ca_trusted_certs: true
