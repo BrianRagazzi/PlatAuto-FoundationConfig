@@ -1,7 +1,7 @@
 ---
 nsxt_admin_username: admin
 nsxt_admin_password: ((nsx_admin_password))
-nsxt_manager: https://corensxmgr.ragazzilab.com
+nsxt_manager: https://sc2-nsxmgr-01.caas.pez.pivotal.io
 
 logical_switches:
 - name: PAS-Infrastructure-LS

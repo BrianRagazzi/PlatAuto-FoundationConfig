@@ -4,7 +4,7 @@ az3_name: AZ3
 healthwatch-forwarder/foundation_name: pas
 healthwatch-forwarder/health_check_az: AZ1
 network_name: deployment
-opsman/enable/url: https://om.pas.ragazzilab.com
+opsman/enable/url: https://om.pas.caas.pez.pivotal.io
 service_network_name: services
 singleton_availability_zone: AZ1
 push-apps_post_deploy_state: off

@@ -1,6 +1,6 @@
-cloud_controller/apps_domain: apps.pas.ragazzilab.com
-cloud_controller/system_domain: system.pas.ragazzilab.com
-mysql_monitor/recipient_email: brian@ragazzilab.com
+cloud_controller/apps_domain: apps.pas.caas.pez.pivotal.io
+cloud_controller/system_domain: system.pas.caas.pez.pivotal.io
+mysql_monitor/recipient_email: mysql@caas.pez.pivotal.io
 network_name: deployment
 security_acknowledgement: X
 singleton_availability_zone: AZ1
