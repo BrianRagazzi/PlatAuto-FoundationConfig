@@ -11,7 +11,7 @@ ntp: time.svc.pivotal.io
 vsphere_vms_folder: /VxRail-Datacenter/vm/FOUNDATIONS/PAS/VMs/
 vcenter_hostname: sc2-vc-01.caas.pez.pivotal.io
 vcenter_userid: administrator@vsphere.local
-opsman_host: om.pas.caas.pez.pivotal.io
+opsman_host: opsmgr.pas.caas.pez.pivotal.io
 opsman_ssh.public_key: ((opsman_ssh.public_key))
 vcenter_password: ((vcenter_password))
 opsman_ssh_password: ((opsman_ssh_password))
