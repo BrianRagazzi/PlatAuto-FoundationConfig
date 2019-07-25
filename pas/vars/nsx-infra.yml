@@ -93,7 +93,7 @@ t0_nat_rules:
   action: DNAT
   source: Any
   dest: 10.193.39.242
-  trans: 192.168.1.10
+  trans: 192.168.1.11
   priority: 805
 - name: opsman-snat #SNAT for OpsMan to get out
   t0_name: T0-Router
@@ -117,12 +117,12 @@ t0_nat_rules:
 #   trans: 192.168.105.4
 #   priority: 805
 # - name: deploy-snat-mgmt # SNAT for deployment network to reach DNS, NTP, etc
-  t0_name: T0-Router
-  action: SNAT
-  source: 10.16.22.0/24
-  dest: 192.168.100.0/24
-  trans: 192.168.105.5
-  priority: 805
+#   t0_name: T0-Router
+#   action: SNAT
+#   source: 10.16.22.0/24
+#   dest: 192.168.100.0/24
+#   trans: 192.168.105.5
+#   priority: 805
 
 ip_blocks:
 - name: PAS-container-IP-Block
