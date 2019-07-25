@@ -88,7 +88,7 @@ t0_nat_rules:
   dest: 10.193.39.241
   trans: 192.168.1.10
   priority: 805
-- name: director-dnat # DNAT to reach BOSH Direector
+- name: director-dnat # DNAT to reach BOSH Director
   t0_name: T0-Router
   action: DNAT
   source: Any
@@ -102,11 +102,11 @@ t0_nat_rules:
   dest: Any
   trans: 10.193.39.241
   priority: 805
-- name: PAS-snat # SNAT for infra network to reach DNS, vCenter, etc
+- name: infra-snat-mgmt # SNAT for infra network to reach DNS, vCenter, etc
   t0_name: T0-Router
   action: SNAT
-  source: 192.168.0.0/22
-  dest: Any
+  source: 192.168.1.0/24
+  dest: 10.193.38.0/24
   trans: 10.193.39.249
   priority: 805
 # - name: infra-snat-esxi # SNAT for infra to reach ESXi hosts
@@ -116,13 +116,13 @@ t0_nat_rules:
 #   dest: 192.168.97.0/24
 #   trans: 192.168.105.4
 #   priority: 805
-# - name: deploy-snat-mgmt # SNAT for deployment network to reach DNS, NTP, etc
-#   t0_name: T0-Router
-#   action: SNAT
-#   source: 10.16.22.0/24
-#   dest: 192.168.100.0/24
-#   trans: 192.168.105.5
-#   priority: 805
+- name: deploy-snat-mgmt # SNAT for deployment network to reach DNS, NTP, etc
+  t0_name: T0-Router
+  action: SNAT
+  source: 192.168.2.0/24
+  dest: 10.193.38.0/24
+  trans: 10.193.39.249
+  priority: 805
 
 ip_blocks:
 - name: PAS-container-IP-Block
