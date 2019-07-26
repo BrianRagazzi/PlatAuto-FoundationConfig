@@ -322,7 +322,7 @@ resource-config:
       id: ((backup_restore_instance_type))
     instances: ((backup_restore_instances))
   clock_global:
-    instances: ((clock_global_instances)
+    instances: ((clock_global_instances))
     instance_type:
       id: ((clock_global_instance_type))
   cloud_controller:
