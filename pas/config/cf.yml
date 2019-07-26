@@ -318,6 +318,110 @@ product-properties:
       private_key_pem: ((uaa/service_provider_key_credentials/privatekey))
 resource-config:
   backup_restore:
+    instances: automatic
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+  clock_global:
+    instances: automatic
+    instance_type:
+      id: automatic
+  cloud_controller:
+    instances: automatic
+    instance_type:
+      id: automatic
+  cloud_controller_worker:
+    instances: automatic
+    instance_type:
+      id: automatic
+  credhub:
+    instances: automatic
+    instance_type:
+      id: automatic
+  diego_brain:
+    instances: automatic
+    instance_type:
+      id: automatic
+  diego_cell:
+    instances: automatic
+    instance_type:
+      id: automatic
+  diego_database:
+    instances: automatic
+    instance_type:
+      id: automatic
+  doppler:
+    instances: automatic
+    instance_type:
+      id: automatic
+  ha_proxy:
+    instances: automatic
+    instance_type:
+      id: automatic
+  istio_control:
+    instances: 0
+    instance_type:
+      id: automatic
+  istio_router:
+    instances: 0
+    instance_type:
+      id: automatic
+  loggregator_trafficcontroller:
+    instances: automatic
+    instance_type:
+      id: automatic
+  mysql:
+    instances: automatic
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+  mysql_monitor:
+    instances: automatic
+    instance_type:
+      id: automatic
+  mysql_proxy:
+    instances: automatic
+    instance_type:
+      id: automatic
+  nats:
+    instances: automatic
+    instance_type:
+      id: automatic
+  nfs_server:
+    instances: automatic
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+  route_syncer:
+    instances: 0
+    instance_type:
+      id: automatic
+  router:
+    instances: automatic
+    instance_type:
+      id: automatic
+  syslog_adapter:
+    instances: automatic
+    instance_type:
+      id: automatic
+  syslog_scheduler:
+    instances: automatic
+    instance_type:
+      id: automatic
+  tcp_router:
+    instances: 0
+    persistent_disk:
+      size_mb: automatic
+    instance_type:
+      id: automatic
+  uaa:
+    instances: automatic
+    instance_type:
+      id: automatic
+  backup_restore:
     instance_type:
       id: ((backup_restore_instance_type))
     instances: ((backup_restore_instances))
