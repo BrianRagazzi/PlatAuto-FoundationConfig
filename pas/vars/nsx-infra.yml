@@ -109,6 +109,13 @@ t0_nat_rules:
   dest: 10.193.38.0/24
   trans: 10.193.39.249
   priority: 805
+- name: infra-snat-dns # SNAT for infra network to reach DNS, vCenter, etc
+  t0_name: T0-Router
+  action: SNAT
+  source: 192.168.1.0/24
+  dest: 10.192.2.0/24
+  trans: 10.193.39.249
+  priority: 805
 # - name: infra-snat-esxi # SNAT for infra to reach ESXi hosts
 #   t0_name: T0-Router
 #   action: SNAT
@@ -121,6 +128,13 @@ t0_nat_rules:
   action: SNAT
   source: 192.168.2.0/24
   dest: 10.193.38.0/24
+  trans: 10.193.39.249
+  priority: 805
+- name: deploy-snat-dns # SNAT for infra network to reach DNS, vCenter, etc
+  t0_name: T0-Router
+  action: SNAT
+  source: 192.168.2.0/24
+  dest: 10.192.2.0/24
   trans: 10.193.39.249
   priority: 805
 
