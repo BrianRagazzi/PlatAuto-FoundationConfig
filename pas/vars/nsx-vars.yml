@@ -8,3 +8,6 @@ properties.tier0_router: T0-Router
 nsx_hostname: sc2-nsxmgr-01.caas.pez.pivotal.io
 properties_nsx_auth_simple_nsx_api_password.secret: ((nsx_admin_password))
 properties.nsx_api_ca_cert: ((nsx_ca_cert))
+properties.external_ip_pool_name: PAS-FLOATING-IP-POOL
+properties.external_ip_pool_ranges: null
+properties.external_ip_pool_cidr: null
