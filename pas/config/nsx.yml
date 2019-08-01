@@ -9,6 +9,11 @@ product-properties:
   .properties.exit_on_disconnection:
     selected_option: ((properties.exit_on_disconnection))
     value: ((properties.exit_on_disconnection))
+  .properties.external_ip_pools:
+    value:
+    - allocation_ranges: ((properties.external_ip_pool_ranges))
+      cidr: ((properties.external_ip_pool_cidr))
+      name: ((properties.external_ip_pool_name))
   .properties.foundation_name:
     value: ((properties.foundation_name))
   .properties.log_dropped_traffic:
