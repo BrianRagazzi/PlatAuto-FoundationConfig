@@ -148,5 +148,5 @@ ip_pools:
   cidr: 10.193.39.0/24
   description: "IP pool that provides 1 public IP for each Cloud Foundry Org"
   gateway: 10.193.39.1
-  range: 10.193.39.241-10.193.39.253
+  range: 10.193.39.244-10.193.39.253
   dns_servers:
