@@ -69,15 +69,15 @@ load_balancers:
   - name: pas-web-vs
     pool_name: pas-web-pool
     port: 443
-    virtual_ip: 10.193.39.243
+    virtual_ip: 10.193.39.16
   - name: pas-tcp-vs
     pool_name: pas-tcp-pool
     port: 5900
-    virtual_ip: 10.193.39.243
+    virtual_ip: 10.193.39.16
   - name: pas-ssh-vs
     pool_name: pas-ssh-pool
     port: 2222
-    virtual_ip: 10.193.39.243
+    virtual_ip: 10.193.39.16
 
 t0_nat_rules:
 # must have a name
@@ -85,14 +85,14 @@ t0_nat_rules:
   t0_name: T0-Router
   action: DNAT
   source: Any
-  dest: 10.193.39.241
+  dest: 10.193.39.14
   trans: 192.168.1.10
   priority: 805
 - name: director-dnat # DNAT to reach BOSH Director
   t0_name: T0-Router
   action: DNAT
   source: Any
-  dest: 10.193.39.242
+  dest: 10.193.39.15
   trans: 192.168.1.11
   priority: 805
 - name: opsman-snat #SNAT for OpsMan to get out
@@ -100,21 +100,21 @@ t0_nat_rules:
   action: SNAT
   source: 192.168.1.10
   dest: Any
-  trans: 10.193.39.241
+  trans: 10.193.39.14
   priority: 805
 - name: infra-snat-mgmt # SNAT for infra network to reach DNS, vCenter, etc
   t0_name: T0-Router
   action: SNAT
   source: 192.168.1.0/24
   dest: 10.193.38.0/24
-  trans: 10.193.39.249
+  trans: 10.193.39.241
   priority: 805
 - name: infra-snat-dns # SNAT for infra network to reach DNS, vCenter, etc
   t0_name: T0-Router
   action: SNAT
   source: 192.168.1.0/24
   dest: 10.192.2.0/24
-  trans: 10.193.39.249
+  trans: 10.193.39.241
   priority: 805
 # - name: infra-snat-esxi # SNAT for infra to reach ESXi hosts
 #   t0_name: T0-Router
@@ -128,14 +128,14 @@ t0_nat_rules:
   action: SNAT
   source: 192.168.2.0/24
   dest: 10.193.38.0/24
-  trans: 10.193.39.249
+  trans: 10.193.39.241
   priority: 805
 - name: deploy-snat-dns # SNAT for infra network to reach DNS, vCenter, etc
   t0_name: T0-Router
   action: SNAT
   source: 192.168.2.0/24
   dest: 10.192.2.0/24
-  trans: 10.193.39.249
+  trans: 10.193.39.241
   priority: 805
 
 ip_blocks:

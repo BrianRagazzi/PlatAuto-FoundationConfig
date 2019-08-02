@@ -5,13 +5,13 @@ properties_nsx_api_ca_cert: ((nsx_ca_cert))
 properties_network_selector_nsx_nsx-t-superuser-certificate.cert_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate_cert_pem))
 properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate_private_key_pem))
 
-properties_cloud_provider_vcenter_dc: LAB
-properties_cloud_provider_vcenter_ds: EQL-THIN01
-properties_cloud_provider_vcenter_ip: corevcsa1.ragazzilab.com
-properties_cloud_provider_vcenter_vms: BOSH/PKS/VMs
+properties_cloud_provider_vcenter_dc: VxRail-Datacenter
+properties_cloud_provider_vcenter_ds: VxRail-Virtual-SAN-Datastore-9c7ab8af-b690-4d34-bfa0-add02b9bbcf4
+properties_cloud_provider_vcenter_ip: sc2-vc-01.caas.pez.pivotal.io
+properties_cloud_provider_vcenter_vms: FOUNDATIONS/PKS2/VMs/
 properties_network_selector: nsx
-properties_network_selector_nsx-t-host: corensxmgr.ragazzilab.com
-properties_network_selector_nsx_cloud-config-dns: 192.168.100.50,192.168.100.150
+properties_network_selector_nsx-t-host: sc2-nsxmgr-01.caas.pez.pivotal.io
+properties_network_selector_nsx_cloud-config-dns: 10.192.2.10,10.192.2.11
 properties_network_selector_nsx_floating-ip-pool-ids: 91ae51a7-1550-41c1-bb37-6533fe153390
 properties_network_selector_nsx_ip-block-id: fe35b421-a184-426d-b671-2adc2b731929
 properties_network_selector_nsx_nodes-ip-block-id: 8a4fd33b-6da5-46c5-bd38-565685ba5d31
