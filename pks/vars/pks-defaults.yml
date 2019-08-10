@@ -19,7 +19,7 @@ properties_uaa_ldap_group_search_filter: member={0}
 properties_uaa_ldap_last_name_attribute: sn
 properties_uaa_ldap_ldap_referrals: follow
 properties_uaa_ldap_mail_attribute_name: mail
-properties_uaa_ldap_search_filter: sAMAccountName={0}
+properties_uaa_ldap_search_filter: userPrincipalName={0}
 properties_uaa_pks_cli_access_token_lifetime: 864000
 properties_uaa_pks_cli_refresh_token_lifetime: 1728000
 properties_wavefront: disabled
