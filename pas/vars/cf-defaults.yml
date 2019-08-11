@@ -103,6 +103,17 @@ uaa/internal/password_min_uppercase: 0
 uaa/proxy_ips_regex: 10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|169\.254\.\d{1,3}\.\d{1,3}|127\.\d{1,3}\.\d{1,3}\.\d{1,3}|172\.1[6-9]{1}\.\d{1,3}\.\d{1,3}|172\.2[0-9]{1}\.\d{1,3}\.\d{1,3}|172\.3[0-1]{1}\.\d{1,3}\.\d{1,3}
 uaa_session_cookie_max_age: 28800
 uaa_session_idle_timeout: 1800
+properties_uaa: internal
+properties_uaa_oidc: false
+properties_uaa_ldap_external_groups_whitelist: '*'
+properties_uaa_ldap_first_name_attribute: givenName
+properties_uaa_ldap_group_search_filter: member={0}
+properties_uaa_ldap_last_name_attribute: sn
+properties_uaa_ldap_ldap_referrals: follow
+properties_uaa_ldap_mail_attribute_name: mail
+properties_uaa_ldap_search_filter: userPrincipalName={0}
+properties_uaa_pks_cli_access_token_lifetime: 864000
+properties_uaa_pks_cli_refresh_token_lifetime: 1728000
 deploy-autoscaler_post_deploy_state: default
 deploy-notifications-ui_post_deploy_state: default
 deploy-notifications_post_deploy_state: default
