@@ -105,7 +105,6 @@ uaa_session_cookie_max_age: 28800
 uaa_session_idle_timeout: 1800
 properties_uaa: internal
 properties_uaa_oidc: false
-properties_uaa_ldap_external_groups_whitelist: '*'
 properties_uaa_ldap_first_name_attribute: givenName
 properties_uaa_ldap_group_search_filter: member={0}
 properties_uaa_ldap_last_name_attribute: sn
