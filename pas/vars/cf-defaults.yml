@@ -114,6 +114,7 @@ properties_uaa_ldap_mail_attribute_name: mail
 properties_uaa_ldap_search_filter: userPrincipalName={0}
 properties_uaa_pks_cli_access_token_lifetime: 864000
 properties_uaa_pks_cli_refresh_token_lifetime: 1728000
+properties.uaa.ldap.group_max_search_depth: 2
 deploy-autoscaler_post_deploy_state: default
 deploy-notifications-ui_post_deploy_state: default
 deploy-notifications_post_deploy_state: default
