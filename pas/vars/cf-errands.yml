@@ -8,5 +8,5 @@ nfsbrokerpush_post_deploy_state: off
 push-apps-manager_post_deploy_state: off
 push-usage-service_post_deploy_state: off
 smbbrokerpush_post_deploy_state: off
-smoke_tests_post_deploy_state: on
+smoke_tests_post_deploy_state: off
 test-autoscaling_post_deploy_state: off
