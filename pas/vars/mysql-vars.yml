@@ -5,7 +5,10 @@ az1_name: AZ1
 az2_name: AZ2
 az3_name: AZ3
 allow_lower_case_table_names_via_config_param: true
-plan1_selector/single_node/az_multi_select: AZ1,AZ2,AZ3
+plan1_selector/single_node/az_multi_select: |
+  - AZ1
+  - AZ2
+  - AZ3
 plan2_selector/single_node/az_multi_select: |
   - AZ1
   - AZ2
