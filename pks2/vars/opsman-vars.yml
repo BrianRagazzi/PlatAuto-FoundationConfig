@@ -4,14 +4,14 @@ opsman_private_ip: 10.16.12.10
 opsman_netmask: 255.255.255.0
 vsphere_datastore: EQL-THIN01
 vsphere_datacenter: LAB
-infrastructure_network: PKS-MGMT
+infrastructure_network: PKS2-MGMT
 infrastructure_gateway: 10.16.12.1
 dns: 192.168.100.50,192.168.100.150
 ntp: 192.168.100.1
 vsphere_vms_folder: /LAB/vm/BOSH/PKS2/VMs/
 vcenter_hostname: corevcsa1.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
-opsman_host: om.pks.ragazzilab.com
+opsman_host: om.pks2.ragazzilab.com
 opsman_ssh.public_key: ((opsman_ssh.public_key))
 vcenter_password: ((vcenter_password))
 opsman_ssh_password: ((opsman_ssh_password))
