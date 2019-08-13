@@ -8,11 +8,11 @@ properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem: ((p
 properties_cloud_provider_vcenter_dc: LAB
 properties_cloud_provider_vcenter_ds: EQL-THIN01
 properties_cloud_provider_vcenter_ip: corevcsa1.ragazzilab.com
-properties_cloud_provider_vcenter_vms: BOSH/PKS/VMs
+properties_cloud_provider_vcenter_vms: BOSH/PKS2/VMs
 properties_network_selector: nsx
 properties_network_selector_nsx-t-host: corensxmgr.ragazzilab.com
 properties_network_selector_nsx_cloud-config-dns: 192.168.100.50,192.168.100.150
-properties_network_selector_nsx_floating-ip-pool-name: PKS-FLOATING-IP-POOL
+properties_network_selector_nsx_floating-ip-pool-name: PKS2-FLOATING-IP-POOL
 #properties_network_selector_nsx_floating-ip-pool-ids: bd508ebe-ef1c-4ad5-85da-e5072544c9de
 #properties_network_selector_nsx_ip-block-id: 09e71c31-0dcb-49ba-8751-5a5a7d4f5270
 properties_network_selector_nsx_ip-block-name: PKS-Pods-Block
@@ -42,13 +42,13 @@ properties_pks-vrli_enabled: enabled
 properties_pks-vrli_enabled_host: syslog.ragazzilab.com
 properties_pks-vrli_enabled_skip_cert_verify: true
 properties_pks-vrops: disabled
-properties_pks_api_hostname: api.pks.ragazzilab.com
+properties_pks_api_hostname: api.pks2.ragazzilab.com
 az1_name: AZ1
 az2_name: AZ2
 az3_name: AZ3
 properties_worker_max_in_flight: 1
-network_name: PKS-MGMT
-service_network: PKS-MGMT
+network_name: PKS2-MGMT
+service_network: PKS2-MGMT
 singleton_availability_zone: MGMT
 properties_cloud_provider_vsphere_vcenter_master_creds_identity: administrator@vsphere.local
 
