@@ -12,7 +12,7 @@ vsphere_az2_host_group: HOST3
 vsphere_az3_cluster: attic
 vsphere_az3_resource_pool: PKS2
 vsphere_az3_host_group: HOST1
-pks_mgmt_network: PKS2-MGMT
+pks_mgmt_network: PKS2-MGMT  # network name in vsphere
 pks_mgmt_gateway: 10.16.12.1
 pks_mgmt_network_cidr: 10.16.12.0/24
 pks_mgmt_network_reserved: 10.16.12.1-10.16.12.11
