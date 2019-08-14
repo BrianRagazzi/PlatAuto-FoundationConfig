@@ -1,5 +1,5 @@
 ---
-pivnet-api-token: ((pivnet-token))
+pivnet-api-token: ((pivnet-token-beta))
 pivnet-file-glob: "pivotal-container-service*.pivotal"
 pivnet-product-slug: pivotal-container-service
 product-version-regex: ^1\.5\.[0-9]+$  #^1\.4\..*$

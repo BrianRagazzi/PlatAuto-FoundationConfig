@@ -1,5 +1,5 @@
 ---
-pivnet-api-token: ((pivnet-token))
+pivnet-api-token: ((pivnet-token-beta))
 #pivnet-file-glob: "*cf*.pivotal" #"*srt*.pivotal"
 pivnet-file-glob: "*srt*.pivotal"
 pivnet-product-slug: elastic-runtime
