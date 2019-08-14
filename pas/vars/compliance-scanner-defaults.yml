@@ -1,5 +1,0 @@
----
- properties.scanner_timeout: 1200
- oscap_store_instances: automatic
- oscap_store_instance_type: automatic
- scan_results_state: false

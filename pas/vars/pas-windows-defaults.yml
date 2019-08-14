@@ -1,9 +1,0 @@
-bosh_ssh_enabled: false
-rdp_enabled: false
-system_metrics_enabled: true
-install-hwc-buildpack_post_deploy_state: default
-smoke_tests_windows_post_deploy_state: default
-windows_diego_cell_instance_type: automatic
-windows_diego_cell_instances: automatic
-install-hwc-buildpack_post_deploy_state: default
-smoke_tests_windows_post_deploy_state: default

@@ -1,6 +1,0 @@
----
-properties.ntp_server: 192.168.1.1
-properties.syslog_host: syslog.ragazzilab.com
-properties.syslog_port: 514
-network_name: infrastructure
-singleton_availability_zone: MGMT

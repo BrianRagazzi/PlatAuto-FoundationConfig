@@ -1,5 +1,0 @@
-# Used in post-deploy configuration update
-
-delete-space_pre_delete_state: default
-push-apps_post_deploy_state: off
-smoke-tests_post_deploy_state: off
