@@ -24,36 +24,52 @@ product-properties:
     value: ((properties_log_sink_resources_deploy))
   .properties.network_selector:
     value: ((properties_network_selector))
-  .properties.network_selector.nsx.cloud-config-dns:
-    value: ((properties_network_selector_nsx_cloud-config-dns))
-  .properties.network_selector.nsx.floating-ip-pool-ids:
-    value: ((properties_network_selector_nsx_floating-ip-pool-ids))
-  .properties.network_selector.nsx.ip-block-id:
-    value: ((properties_network_selector_nsx_ip-block-id))
-  .properties.network_selector.nsx.lb_size_large_supported:
-    value: ((properties_network_selector_nsx_lb_size_large_supported))
-  .properties.network_selector.nsx.lb_size_medium_supported:
-    value: ((properties_network_selector_nsx_lb_size_medium_supported))
-  .properties.network_selector.nsx.nat_mode:
-    value: ((properties_network_selector_nsx_nat_mode))
-  .properties.network_selector.nsx.network_automation:
-    value: ((properties_network_selector_nsx_network_automation))
-  .properties.network_selector.nsx.nodes-ip-block-id:
-    value: ((properties_network_selector_nsx_nodes-ip-block-id))
-  .properties.network_selector.nsx.nsx-t-ca-cert:
-    value: ((properties_nsx_api_ca_cert))
-  .properties.network_selector.nsx.nsx-t-host:
-    value: ((properties_network_selector_nsx-t-host))
-  .properties.network_selector.nsx.nsx-t-insecure:
-    value: ((properties_network_selector_nsx_nsx-t-insecure))
-  .properties.network_selector.nsx.nsx-t-superuser-certificate:
-    value:
-      cert_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate.cert_pem))
-      private_key_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem))
-  .properties.network_selector.nsx.t0-router-id:
-    value: ((properties_network_selector_nsx_t0-router-id))
-  .properties.network_selector.nsx.vcenter_cluster:
-    value: ((properties_network_selector_nsx_vcenter_cluster))
+  .properties.network_selector.flannel.pod_network_cidr:
+    value: 10.200.0.0/16
+  .properties.network_selector.flannel.service_cluster_cidr:
+    value: 10.100.200.0/24
+  .properties.node_exporter_deploy:
+    value: false
+  .properties.oidc_selector:
+    value: ((properties.oidc_selector))
+  .properties.oidc_selector.enabled.groups_claim:
+    value: ((properties.oidc_selector.enabled.groups_claim))
+  .properties.oidc_selector.enabled.groups_prefix:
+    value: ((properties.oidc_selector.enabled.groups_prefix))
+  .properties.oidc_selector.enabled.username_claim:
+    value: ((properties.oidc_selector.enabled.username_claim))
+  .properties.oidc_selector.enabled.username_prefix:
+    value: ((properties.oidc_selector.enabled.username_prefix))
+  # .properties.network_selector.nsx.cloud-config-dns:
+  #   value: ((properties_network_selector_nsx_cloud-config-dns))
+  # .properties.network_selector.nsx.floating-ip-pool-ids:
+  #   value: ((properties_network_selector_nsx_floating-ip-pool-ids))
+  # .properties.network_selector.nsx.ip-block-id:
+  #   value: ((properties_network_selector_nsx_ip-block-id))
+  # .properties.network_selector.nsx.lb_size_large_supported:
+  #   value: ((properties_network_selector_nsx_lb_size_large_supported))
+  # .properties.network_selector.nsx.lb_size_medium_supported:
+  #   value: ((properties_network_selector_nsx_lb_size_medium_supported))
+  # .properties.network_selector.nsx.nat_mode:
+  #   value: ((properties_network_selector_nsx_nat_mode))
+  # .properties.network_selector.nsx.network_automation:
+  #   value: ((properties_network_selector_nsx_network_automation))
+  # .properties.network_selector.nsx.nodes-ip-block-id:
+  #   value: ((properties_network_selector_nsx_nodes-ip-block-id))
+  # .properties.network_selector.nsx.nsx-t-ca-cert:
+  #   value: ((properties_nsx_api_ca_cert))
+  # .properties.network_selector.nsx.nsx-t-host:
+  #   value: ((properties_network_selector_nsx-t-host))
+  # .properties.network_selector.nsx.nsx-t-insecure:
+  #   value: ((properties_network_selector_nsx_nsx-t-insecure))
+  # .properties.network_selector.nsx.nsx-t-superuser-certificate:
+  #   value:
+  #     cert_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate.cert_pem))
+  #     private_key_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem))
+  # .properties.network_selector.nsx.t0-router-id:
+  #   value: ((properties_network_selector_nsx_t0-router-id))
+  # .properties.network_selector.nsx.vcenter_cluster:
+  #   value: ((properties_network_selector_nsx_vcenter_cluster))
   .properties.pks-vrli:
     value: ((properties_pks-vrli_enabled))
   .properties.pks-vrli.enabled.host:
