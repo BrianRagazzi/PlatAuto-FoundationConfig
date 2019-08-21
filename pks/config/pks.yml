@@ -54,6 +54,18 @@ product-properties:
     value: ((properties_network_selector_nsx_t0-router-id))
   .properties.network_selector.nsx.vcenter_cluster:
     value: ((properties_network_selector_nsx_vcenter_cluster))
+  .properties.node_exporter_deploy: #Cluster Metric Sink node exporter
+    value: ((properties_node_exporter_deploy))
+  .properties.oidc_selector:
+    value: ((properties_oidc_selector))
+  .properties.oidc_selector.enabled.groups_claim:
+    value: ((properties_oidc_selector_enabled_groups_claim))
+  .properties.oidc_selector.enabled.groups_prefix:
+    value: ((properties_oidc_selector_enabled_groups_prefix))
+  .properties.oidc_selector.enabled.username_claim:
+    value: ((properties_oidc_selector_enabled_username_claim))
+  .properties.oidc_selector.enabled.username_prefix:
+    value: ((properties_oidc_selector_enabled_username_prefix))
   .properties.pks-vrli:
     value: ((properties_pks-vrli_enabled))
   .properties.pks-vrli.enabled.host:
@@ -214,8 +226,8 @@ product-properties:
     value: ((properties_uaa_ldap_server_ssl_cert))
   .properties.uaa.ldap.url:
     value: ((properties_uaa_ldap_url))
-  .properties.uaa_oidc:
-    value: ((properties_uaa_oidc))
+  # .properties.uaa_oidc: # Removed from PKS 1.5
+  #   value: ((properties_uaa_oidc))
   .properties.uaa_pks_cli_access_token_lifetime:
     value: ((properties_uaa_pks_cli_access_token_lifetime))
   .properties.uaa_pks_cli_refresh_token_lifetime:
