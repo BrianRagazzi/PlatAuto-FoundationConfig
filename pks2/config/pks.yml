@@ -25,21 +25,21 @@ product-properties:
   .properties.network_selector:
     value: ((properties_network_selector))
   .properties.network_selector.flannel.pod_network_cidr:
-    value: 10.200.0.0/16
+    value: ((properties_network_selector_flannel_pod_network_cidr))
   .properties.network_selector.flannel.service_cluster_cidr:
-    value: 10.100.200.0/24
+    value: ((properties_network_selector_flannel_service_cluster_cidr))
   .properties.node_exporter_deploy:
     value: false
   .properties.oidc_selector:
-    value: ((properties.oidc_selector))
+    value: ((properties_oidc_selector))
   .properties.oidc_selector.enabled.groups_claim:
-    value: ((properties.oidc_selector.enabled.groups_claim))
+    value: ((properties_oidc_selector_enabled_groups_claim))
   .properties.oidc_selector.enabled.groups_prefix:
-    value: ((properties.oidc_selector.enabled.groups_prefix))
+    value: ((properties_oidc_selector_enabled_groups_prefix))
   .properties.oidc_selector.enabled.username_claim:
-    value: ((properties.oidc_selector.enabled.username_claim))
+    value: ((properties_oidc_selector_enabled_username_claim))
   .properties.oidc_selector.enabled.username_prefix:
-    value: ((properties.oidc_selector.enabled.username_prefix))
+    value: ((properties_oidc_selector_enabled_username_prefix))
   # .properties.network_selector.nsx.cloud-config-dns:
   #   value: ((properties_network_selector_nsx_cloud-config-dns))
   # .properties.network_selector.nsx.floating-ip-pool-ids:
