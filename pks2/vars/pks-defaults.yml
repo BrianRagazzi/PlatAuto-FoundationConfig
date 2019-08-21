@@ -27,7 +27,7 @@ properties_worker_max_in_flight: 1
 resource-config_persistent_disk: automatic
 resource-config_instance_type: automatic
 errand-config_delete-all-clusters: true
-errand-config_pks-nsx-t-precheck: true
+errand-config_pks-nsx-t-precheck: false
 errand-config_smoke-tests: false
 errand-config_update-all-service-instances: false
 errand-config_wavefront-alert-creation: false
