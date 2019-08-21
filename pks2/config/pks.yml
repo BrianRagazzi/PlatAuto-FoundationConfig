@@ -232,8 +232,8 @@ product-properties:
     value: ((properties_uaa_ldap_server_ssl_cert))
   .properties.uaa.ldap.url:
     value: ((properties_uaa_ldap_url))
-  .properties.uaa_oidc:
-    value: ((properties_uaa_oidc))
+  # .properties.uaa_oidc:
+  #   value: ((properties_uaa_oidc))
   .properties.uaa_pks_cli_access_token_lifetime:
     value: ((properties_uaa_pks_cli_access_token_lifetime))
   .properties.uaa_pks_cli_refresh_token_lifetime:
