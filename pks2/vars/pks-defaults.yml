@@ -36,7 +36,7 @@ telemetry_installation_purpose_selector: not_provided # demo_or_poc, dev_or_pre_
 properties_network_selector_flannel_pod_network_cidr: 10.200.0.0/16
 properties_network_selector_flannel_service_cluster_cidr: 10.100.200.0/24
 properties_node_exporter_deploy: false
-properties_oidc_selector: enabled
+properties_oidc_selector: enabled # Configure Created clusters to use UAA as the OIDC provider
 #properties_oidc_selector.enabled.:
 properties_oidc_selector_enabled_groups_claim: roles
 properties_oidc_selector_enabled_groups_prefix: '-'
