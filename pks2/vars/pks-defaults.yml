@@ -37,8 +37,8 @@ properties_network_selector_flannel_pod_network_cidr: 10.200.0.0/16
 properties_network_selector_flannel_service_cluster_cidr: 10.100.200.0/24
 properties_node_exporter_deploy: false
 properties_oidc_selector: enabled
-  enabled:
-    groups_claim: roles
-    groups_prefix: '-'
-    username_claim: user_name
-    username_prefix: '-'
+#properties_oidc_selector.enabled.:
+properties_oidc_selector.enabled.groups_claim: roles
+properties_oidc_selector.enabled.groups_prefix: '-'
+properties_oidc_selector.enabled.username_claim: user_name
+properties_oidc_selector.enabled.username_prefix: '-'
