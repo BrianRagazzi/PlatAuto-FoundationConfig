@@ -33,6 +33,7 @@ errand-config_update-all-service-instances: false
 errand-config_wavefront-alert-creation: false
 errand-config_wavefront-alert-deletion: false
 #NEW to 1.5
+telemetry_installation_purpose_selector: not_provided # demo_or_poc, dev_or_pre_prod, prod, not_provided
 properties_node_exporter_deploy: false # Cluster Metric Sink - Enable Node Exporter
 properties_oidc_selector: enabled # Configure Created clusters to use UAA as the OIDC provider
 properties_oidc_selector_enabled_groups_claim: roles

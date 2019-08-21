@@ -187,12 +187,50 @@ product-properties:
   .properties.plan10_selector:
     selected_option: inactive
     value: Plan Inactive
+
+  .properties.plan11_selector:
+    value: ((properties_plan11_selector_value))
+  .properties.plan11_selector.active.allow_privileged_containers:
+    value: ((properties_plan11_selector_active_allow_privileged_containers))
+  .properties.plan11_selector.active.description:
+    value: ((properties_plan11_selector_active_description))
+  .properties.plan11_selector.active.master_az_placement:
+    value: ((properties_plan11_selector_active_master_az_placement))
+  .properties.plan11_selector.active.master_instances:
+    value: ((properties_plan11_selector_active_master_instances))
+  .properties.plan11_selector.active.master_persistent_disk_type:
+    value: ((properties_plan11_selector_active_master_persistent_disk_type))
+  .properties.plan11_selector.active.max_worker_instances:
+    value: ((properties_plan11_selector_active_max_worker_instances))
+  .properties.plan11_selector.active.name:
+    value: ((properties_plan11_selector_active_name))
+  .properties.plan11_selector.active.worker_az_placement:
+    value: ((properties_plan11_selector_active_worker_az_placement))
+  .properties.plan11_selector.active.worker_instances:
+    value: ((properties_plan11_selector_active_worker_instances))
+  .properties.plan11_selector.active.allow_privileged_containers:
+    value: ((properties_plan11_selector_active_allow_privileged_containers))
+  .properties.plan11_selector.active.errand_vm_type:
+    value: ((properties_plan11_selector_active_errand_vm_type))
+  .properties.plan11_selector.active.master_vm_type:
+    value: ((properties_plan11_selector_active_master_vm_type))
+  .properties.plan11_selector.active.worker_vm_type:
+    value: ((properties_plan11_selector_active_worker_vm_type))
+
+  .properties.plan12_selector:
+    selected_option: inactive
+    value: Plan Inactive
+  .properties.plan13_selector:
+    selected_option: inactive
+    value: Plan Inactive
   .properties.proxy_selector:
     selected_option: disabled
     value: Disabled
   .properties.syslog_selector:
     selected_option: disabled
     value: disabled
+  .properties.telemetry_installation_purpose_selector:
+    value: ((telemetry_installation_purpose_selector))
   .properties.telemetry_selector:
     selected_option: disabled
     value: disabled
