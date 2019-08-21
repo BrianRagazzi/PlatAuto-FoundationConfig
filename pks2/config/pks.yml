@@ -28,7 +28,7 @@ product-properties:
     value: ((properties_network_selector_flannel_pod_network_cidr))
   .properties.network_selector.flannel.service_cluster_cidr:
     value: ((properties_network_selector_flannel_service_cluster_cidr))
-  .properties.node_exporter_deploy:
+  .properties.node_exporter_deploy: #Cluster Metric Sink
     value: false
   .properties.oidc_selector:
     value: ((properties_oidc_selector))
