@@ -167,7 +167,6 @@ product-properties:
     value: ((properties_plan3_selector_active_worker_vm_type))
 
 
-
   .properties.plan4_selector:
     value: Plan Inactive
   .properties.plan5_selector:
