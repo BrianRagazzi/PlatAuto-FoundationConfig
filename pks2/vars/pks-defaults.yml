@@ -32,12 +32,13 @@ errand-config_smoke-tests: false
 errand-config_update-all-service-instances: false
 errand-config_wavefront-alert-creation: false
 errand-config_wavefront-alert-deletion: false
-telemetry_installation_purpose_selector: not_provided # demo_or_poc, dev_or_pre_prod, prod, not_provided
+#Flannel-specific
 properties_network_selector_flannel_pod_network_cidr: 10.200.0.0/16
 properties_network_selector_flannel_service_cluster_cidr: 10.100.200.0/24
 properties_node_exporter_deploy: false
+#NEW to 1.5
+telemetry_installation_purpose_selector: not_provided # demo_or_poc, dev_or_pre_prod, prod, not_provided
 properties_oidc_selector: enabled # Configure Created clusters to use UAA as the OIDC provider
-#properties_oidc_selector.enabled.:
 properties_oidc_selector_enabled_groups_claim: roles
 properties_oidc_selector_enabled_groups_prefix: '-'
 properties_oidc_selector_enabled_username_claim: user_name
