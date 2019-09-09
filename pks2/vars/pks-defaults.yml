@@ -40,6 +40,6 @@ properties_node_exporter_deploy: false
 telemetry_installation_purpose_selector: not_provided # demo_or_poc, dev_or_pre_prod, prod, not_provided
 properties_oidc_selector: enabled # Configure Created clusters to use UAA as the OIDC provider
 properties_oidc_selector_enabled_groups_claim: roles
-properties_oidc_selector_enabled_groups_prefix: '-'
+properties_oidc_selector_enabled_groups_prefix: 'oidc:'
 properties_oidc_selector_enabled_username_claim: user_name
-properties_oidc_selector_enabled_username_prefix: '-'
+properties_oidc_selector_enabled_username_prefix: 'oidc:'
