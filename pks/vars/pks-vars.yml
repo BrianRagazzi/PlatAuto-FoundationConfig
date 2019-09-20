@@ -6,11 +6,11 @@ properties_network_selector_nsx_nsx-t-superuser-certificate.cert_pem: ((properti
 properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem: ((properties_network_selector_nsx_nsx-t-superuser-certificate_private_key_pem))
 
 properties_cloud_provider_vcenter_dc: LAB
-properties_cloud_provider_vcenter_ds: EQL-THIN01
+properties_cloud_provider_vcenter_ds: vsanDatastore
 properties_cloud_provider_vcenter_ip: corevcsa1.ragazzilab.com
-properties_cloud_provider_vcenter_vms: BOSH/PKS/VMs
+properties_cloud_provider_vcenter_vms: WORK/PKS/VMs/
 properties_network_selector: nsx
-properties_network_selector_nsx-t-host: corensxmgr.ragazzilab.com
+properties_network_selector_nsx-t-host: nsxmgr.ragazzilab.com
 properties_network_selector_nsx_cloud-config-dns: 192.168.100.50,192.168.100.150
 properties_network_selector_nsx_floating-ip-pool-name: PKS-FLOATING-IP-POOL
 #properties_network_selector_nsx_floating-ip-pool-ids: bd508ebe-ef1c-4ad5-85da-e5072544c9de
