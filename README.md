@@ -20,4 +20,5 @@ These files are used to deploy foundations pks and pas to my homelab environment
 
 5. Add permissions in credhub to new client
 `credhub set-permission -a uaa-client:credhub -p /concourse/* -o read,write,delete
+
 credhub set-permission -a uaa-client:credhub -p /foundation/* -o read,write,delete`
