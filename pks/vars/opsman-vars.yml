@@ -3,7 +3,7 @@ opsman_vm_name: om-pks
 opsman_private_ip: 10.16.11.10
 opsman_netmask: 255.255.255.0
 vsphere_datastore: vsanDatastore
-vsphere_datacenter: LAB
+vsphere_datacenter: attic
 infrastructure_network: PKS-MGMT
 infrastructure_gateway: 10.16.11.1
 dns: 192.168.100.50,192.168.100.150
