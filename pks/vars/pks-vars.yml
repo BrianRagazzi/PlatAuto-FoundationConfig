@@ -7,7 +7,7 @@ properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem: ((p
 
 properties_cloud_provider_vcenter_dc: LAB
 properties_cloud_provider_vcenter_ds: vsanDatastore
-properties_cloud_provider_vcenter_ip: corevcsa1.ragazzilab.com
+properties_cloud_provider_vcenter_ip: vcsa.ragazzilab.com
 properties_cloud_provider_vcenter_vms: WORK/PKS/VMs/
 properties_network_selector: nsx
 properties_network_selector_nsx-t-host: nsxmgr.ragazzilab.com
