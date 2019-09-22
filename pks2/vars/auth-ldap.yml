@@ -1,0 +1,26 @@
+---
+decryption-passphrase: ((opsman_decryption_passphrase))
+server-url: ldap://coreadc1.ragazzilab.com
+ldap-username: CN=svcacct AD. Bind,OU=Service Accounts,DC=ragazzilab,DC=com
+ldap-password: ((ldap_bind_password))
+user-search-base: OU=User Accounts,DC=ragazzilab,DC=com
+user-search-filter: sAMAccountName={0}
+group-search-base: OU=Security Groups,DC=ragazzilab,DC=com
+group-search-filter: member={0}
+ldap-rbac-admin-group-name: CN=Pivotal Admins,OU=Security Groups,DC=ragazzilab,DC=com
+email-attribute: mail
+ldap-referrals: follow
+server-ssl-cert: ((ldap_server_ssl_cert))
+
+
+# Optional
+# http-proxy-url:                 # proxy for outbound HTTP network traffic
+# https-proxy-url:                # proxy for outbound HTTPS network traffic
+# no-proxy:                       # comma-separated list of hosts that do not go
+                                  # through the proxy
+# precreated-client-secret:       # create a UAA client on the Ops Manager vm.
+                                  # this will be client-secret in env.yml
+# server-ssl-cert:                # the server certificate when using ldaps://
+# skip-create-bosh-admin-client:  # do not create a UAA client on the BOSH
+                                  # director. The client is required to execute
+                                  # BOSH commands from the BOSH CLI

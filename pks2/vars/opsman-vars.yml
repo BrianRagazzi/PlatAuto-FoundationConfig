@@ -1,15 +1,15 @@
-vsphere_resource_pool: /LAB/host/attic/Resources/PKS2-MGMT # /<Data Center Name>/host/<Cluster Name>
+vsphere_resource_pool: /attic/host/WORK/Resources/PKS2-MGMT # /<Data Center Name>/host/<Cluster Name>
 opsman_vm_name: om-pks2
 opsman_private_ip: 192.168.120.10
 opsman_netmask: 255.255.255.0
-vsphere_datastore: EQL-THIN01
-vsphere_datacenter: LAB
+vsphere_datastore: vsanDatastore
+vsphere_datacenter: attic
 infrastructure_network: VLAN120-PKS2
 infrastructure_gateway: 192.168.120.1
 dns: 192.168.100.50,192.168.100.150
 ntp: 192.168.100.1
-vsphere_vms_folder: /LAB/vm/BOSH/PKS2/VMs/
-vcenter_hostname: corevcsa1.ragazzilab.com
+vsphere_vms_folder: /attic/vm/WORK/PKS2/VMs/
+vcenter_hostname: vcsa.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
 opsman_host: om.pks2.ragazzilab.com
 opsman_ssh.public_key: ((opsman_ssh.public_key))
