@@ -1,16 +1,16 @@
-vsphere_templates_folder: WORK/PKS2/templates
+vsphere_templates_folder: WORK/PKS2/Templates
 vsphere_disks_folder: pks2-disks
 vsphere_mgmtaz_cluster: WORK
-vsphere_mgmtaz_resource_pool: PKS-MGMT
+vsphere_mgmtaz_resource_pool: PKS2-MGMT
 vsphere_mgmtaz_host_group: ""
 vsphere_az1_cluster: WORK
-vsphere_az1_resource_pool: PKS
+vsphere_az1_resource_pool: PKS2
 vsphere_az1_host_group: HOST3
 vsphere_az2_cluster: WORK
-vsphere_az2_resource_pool: PKS
+vsphere_az2_resource_pool: PKS2
 vsphere_az2_host_group: HOST2
 vsphere_az3_cluster: WORK
-vsphere_az3_resource_pool: PKS
+vsphere_az3_resource_pool: PKS2
 vsphere_az3_host_group: HOST1
 pks_mgmt_network: VLAN120-PKS2 #PKS2-MGMT  # network name in vsphere
 pks_mgmt_gateway: 192.168.120.1 #10.16.12.1
