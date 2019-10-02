@@ -9,7 +9,7 @@ These files are used to deploy foundations pks and pas to my homelab environment
 1. Point UAAC at the UAA server
 > uaac target https://uaa.pae.ragazzilab.com:8443 --skip-ssl-validation
 
-2. Get admin token (retrieve secret from opsgr)
+2. Get admin token (retrieve secret from opsmgr)
 > uaac token client get admin -s <SECRET>
 
 3. Add credhub client (in this case, named "credhub")
