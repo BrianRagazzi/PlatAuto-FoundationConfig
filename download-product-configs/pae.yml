@@ -1,6 +1,6 @@
 ---
 pivnet-api-token: ((pivnet-token))
-pivnet-file-glob: "platform-automation-engine--.pivotal"
+pivnet-file-glob: "platform-automation-engine-*.pivotal"
 pivnet-product-slug: platform-automation-engine
 product-version-regex: ^1\.[01]\.[0-9]+  #^1\.4\..*$
 stemcell-iaas: vsphere
