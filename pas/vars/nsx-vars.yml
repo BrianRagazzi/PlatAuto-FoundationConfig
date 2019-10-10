@@ -4,7 +4,7 @@ properties.foundation_name: PAS
 properties.nsx_api_managers: nsxmgr.ragazzilab.com
 properties.nsx_auth_simple_nsx_api_user: admin
 properties.overlay_tz: tz-overlay
-properties.tier0_router: t0-core
+properties.tier0_router: tier0
 nsx_hostname: nsxmgr.ragazzilab.com
 properties_nsx_auth_simple_nsx_api_password.secret: ((nsx_admin_password))
 properties.nsx_api_ca_cert: ((nsx_ca_cert))
