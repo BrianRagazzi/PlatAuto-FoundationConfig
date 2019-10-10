@@ -1,7 +1,7 @@
 ---
 nsxt_admin_username: admin
 nsxt_admin_password: ((nsx_admin_password))
-nsxt_manager: https://corensxmgr.ragazzilab.com
+nsxt_manager: https://nsxmgr.ragazzilab.com
 
 logical_switches:
 - name: pas-infra
@@ -15,25 +15,25 @@ logical_switches:
 
 t1_logical_routers:
 - name: "T1-PAS-INFRA"
-  t0_name: "t0-core"
+  t0_name: "tier0"
   edgecluster_name: ""
   downlinks:
     - logical_switch_name: "pas-infra"
       router_port_cidr: "10.16.21.1/24"
 - name: T1-PAS-DEPLOY
-  t0_name: t0-core
+  t0_name: tier0
   edgecluster_name: "edgecluster1"
   downlinks:
     - logical_switch_name: pas-deploy
       router_port_cidr: 10.16.22.1/24
 - name: T1-PAS-SERVICES
-  t0_name: t0-core
+  t0_name: tier0
   edgecluster_name: ""
   downlinks:
     - logical_switch_name: pas-services
       router_port_cidr: 10.16.23.1/24
 - name: T1-PAS-DYNSVCS
-  t0_name: t0-core
+  t0_name: tier0
   edgecluster_name: ""
   downlinks:
     - logical_switch_name: pas-dynsvcs
@@ -82,42 +82,42 @@ load_balancers:
 t0_nat_rules:
 # must have a name
 - name: opsman-dnat # DNAT to reach Ops Mgr
-  t0_name: t0-core
+  t0_name: tier0
   action: DNAT
   source: Any
   dest: 192.168.105.20
   trans: 10.16.21.20
   priority: 1002
 - name: director-dnat # DNAT to reach BOSH Direector
-  t0_name: t0-core
+  t0_name: tier0
   action: DNAT
   source: Any
   dest: 192.168.105.21
   trans: 10.16.21.21
   priority: 1002
 - name: opsman-snat #SNAT for OpsMan to get out
-  t0_name: t0-core
+  t0_name: tier0
   action: SNAT
   source: 10.16.21.20
   dest: Any
   trans: 192.168.105.20
   priority: 1002
 - name: infra-snat-mgmt # SNAT for infra network to reach DNS, vCenter, etc
-  t0_name: t0-core
+  t0_name: tier0
   action: SNAT
   source: 10.16.21.0/24
   dest: 192.168.100.0/24
   trans: 192.168.105.4
   priority: 1002
 - name: infra-snat-esxi # SNAT for infra to reach ESXi hosts
-  t0_name: t0-core
+  t0_name: tier0
   action: SNAT
   source: 10.16.21.0/24
   dest: 192.168.97.0/24
   trans: 192.168.105.4
   priority: 1002
 - name: deploy-snat-mgmt # SNAT for deployment network to reach DNS, NTP, etc
-  t0_name: t0-core
+  t0_name: tier0
   action: SNAT
   source: 10.16.22.0/24
   dest: 192.168.100.0/24
