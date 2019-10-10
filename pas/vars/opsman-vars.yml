@@ -3,7 +3,7 @@ opsman_vm_name: om-pas
 opsman_private_ip: 10.16.21.20
 opsman_netmask: 255.255.255.0
 vsphere_datastore: vsanDatastore
-vsphere_datacenter: LAB
+vsphere_datacenter: attic
 infrastructure_network: pas-infra
 infrastructure_gateway: 10.16.21.1
 dns: 192.168.100.50,192.168.100.150
