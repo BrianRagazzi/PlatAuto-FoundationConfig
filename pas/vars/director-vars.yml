@@ -1,4 +1,4 @@
-vsphere_templates_folder: WORK/PAS/templates
+vsphere_templates_folder: WORK/PAS/Templates
 vsphere_disks_folder: pas-disks
 vsphere_mgmtaz_cluster: WORK
 vsphere_mgmtaz_resource_pool: PAS-MGMT
