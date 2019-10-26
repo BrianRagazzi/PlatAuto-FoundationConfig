@@ -67,14 +67,14 @@ t0_nat_rules:
   source: 10.17.0.0/16
   dest: 192.168.100.0/24
   trans: 192.168.105.5
-  priority: 1002
+  priority: 1000
 - name: pods-snat-mgmt # SNAT for Nodes blockto reach DNS, NTP, etc
   t0_name: tier0
   action: SNAT
   source: 10.18.0.0/16
   dest: 192.168.100.0/24
   trans: 192.168.105.6
-  priority: 1002
+  priority: 1000
 
 ip_blocks:
 - name: PKS-Nodes-Block
