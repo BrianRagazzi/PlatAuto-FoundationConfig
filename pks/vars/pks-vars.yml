@@ -55,8 +55,8 @@ properties_cloud_provider_vsphere_vcenter_master_creds_identity: administrator@v
 properties_plan1_selector_active_name: small
 properties_plan1_selector_value: "Plan Active"
 properties_plan1_selector_active_allow_privileged_containers: true
-properties_plan1_selector_active_description: "1 master 1 worker"
-properties_plan1_selector_active_master_az_placement: [AZ1]
+properties_plan1_selector_active_description: "1 medium master, 1 medium worker"
+properties_plan1_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan1_selector_active_master_instances: 1
 properties_plan1_selector_active_master_persistent_disk_type: "10240"
 properties_plan1_selector_active_max_worker_instances: 3
@@ -70,11 +70,11 @@ properties_plan1_selector_active_errand_vm_type: micro
 properties_plan2_selector_active_name: medium
 properties_plan2_selector_value: "Plan Active"
 properties_plan2_selector_active_allow_privileged_containers: true
-properties_plan2_selector_active_description: "1 master 3 workers"
-properties_plan2_selector_active_master_az_placement: [AZ1]
+properties_plan2_selector_active_description: "1 medium master, 3 medium workers"
+properties_plan2_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan2_selector_active_master_instances: 1
 properties_plan2_selector_active_master_persistent_disk_type: "10240"
-properties_plan2_selector_active_max_worker_instances: 3
+properties_plan2_selector_active_max_worker_instances: 6
 properties_plan2_selector_active_worker_instances: 1
 properties_plan2_selector_active_worker_az_placement: [AZ1,AZ2,AZ3]
 properties_plan2_selector_active_admission_plugins: [deny_escalating_exec]
@@ -85,7 +85,7 @@ properties_plan2_selector_active_errand_vm_type: micro
 properties_plan3_selector_active_name: large
 properties_plan3_selector_value: "Plan Active"
 properties_plan3_selector_active_allow_privileged_containers: true
-properties_plan3_selector_active_description: "3 masters 3 workers"
+properties_plan3_selector_active_description: "3 medium masters 3 large workers"
 properties_plan3_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan3_selector_active_master_instances: 3
 properties_plan3_selector_active_master_persistent_disk_type: "10240"
@@ -94,5 +94,20 @@ properties_plan3_selector_active_worker_instances: 3
 properties_plan3_selector_active_worker_az_placement: [AZ1,AZ2,AZ3]
 properties_plan3_selector_active_admission_plugins: [deny_escalating_exec]
 properties_plan3_selector_active_master_vm_type: medium.disk
-properties_plan3_selector_active_worker_vm_type: medium.disk
+properties_plan3_selector_active_worker_vm_type: large.disk
 properties_plan3_selector_active_errand_vm_type: micro
+
+properties_plan4_selector_active_name: med-large
+properties_plan4_selector_value: "Plan Active"
+properties_plan4_selector_active_allow_privileged_containers: true
+properties_plan4_selector_active_description: "1 medium master, 3 large workers"
+properties_plan4_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
+properties_plan4_selector_active_master_instances: 3
+properties_plan4_selector_active_master_persistent_disk_type: "10240"
+properties_plan4_selector_active_max_worker_instances: 3
+properties_plan4_selector_active_worker_instances: 3
+properties_plan4_selector_active_worker_az_placement: [AZ1,AZ2,AZ3]
+properties_plan4_selector_active_admission_plugins: [deny_escalating_exec]
+properties_plan4_selector_active_master_vm_type: medium.disk
+properties_plan4_selector_active_worker_vm_type: large.disk
+properties_plan4_selector_active_errand_vm_type: micro
