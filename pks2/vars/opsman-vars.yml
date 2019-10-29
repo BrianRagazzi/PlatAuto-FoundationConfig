@@ -13,6 +13,6 @@ vcenter_hostname: vcsa.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
 opsman_host: om.pks2.ragazzilab.com
 opsman_ssh.public_key: ((opsman_ssh.public_key))
-# vcenter_password: ((vcenter_password)) #Remove in OpsMgr 2.6+
-opsman_ssh_password: ((opsman_ssh_password))
+vcenter_password: ((vcenter_password))
+#opsman_ssh_password: ((opsman_ssh_password)) #Remove in OpsMgr 2.6+
 pivnet-api-token: ((pivnet_token))
