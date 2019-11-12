@@ -8,7 +8,7 @@ infrastructure_network: pas-infra
 infrastructure_gateway: 10.16.21.1
 dns: 192.168.100.50,192.168.100.150
 ntp: 192.168.1.1
-vsphere_vms_folder: /attic/vm/WORK/PKS/VMs/
+vsphere_vms_folder: /attic/vm/WORK/PAS/VMs/
 vcenter_hostname: vcsa.ragazzilab.com
 vcenter_userid: administrator@vsphere.local
 opsman_host: om.pas.ragazzilab.com
