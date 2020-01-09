@@ -11,7 +11,7 @@ logical_switches:
 t1_logical_routers:
 - name: "t1-pks-mgmt"
   t0_name: "tier0"
-  edgecluster_name: "edgecluster1"
+  edgecluster_name: ""
   downlinks:
     - logical_switch_name: "PKS-MGMT"
       router_port_cidr: "10.16.11.1/24"
