@@ -1,0 +1,3 @@
+# {"product":"pivotal-container-service","stemcell":["ubuntu-xenial:latest", "windows2019:latest"]}
+product: pivotal-container-service
+stemcell: ["ubuntu-xenial:latest"]

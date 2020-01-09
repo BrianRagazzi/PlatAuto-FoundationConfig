@@ -1,0 +1,18 @@
+vsphere_resource_pool: /attic/host/WORK/Resources/PKS3-MGMT #/LAB/host/attic/Resources/PKS3-MGMT # /<Data Center Name>/host/<Cluster Name>/Resources/<RP Name>
+opsman_vm_name: om-pks
+opsman_private_ip: 10.16.11.10
+opsman_netmask: 255.255.255.0
+vsphere_datastore: vsanDatastore
+vsphere_datacenter: attic
+infrastructure_network: PKS3-MGMT
+infrastructure_gateway: 10.16.11.1
+dns: 192.168.100.50,192.168.100.150
+ntp: 192.168.100.1
+vsphere_vms_folder: /attic/vm/WORK/PKS/VMs/ #/LAB/vm/BOSH/PKS/VMs/
+vcenter_hostname: vcsa.ragazzilab.com
+vcenter_userid: administrator@vsphere.local
+opsman_host: om.pks.ragazzilab.com
+opsman_ssh.public_key: ((opsman_ssh.public_key))
+vcenter_password: ((vcenter_password))
+opsman_ssh_password: ((opsman_ssh_password))
+pivnet-api-token: ((pivnet_token))
