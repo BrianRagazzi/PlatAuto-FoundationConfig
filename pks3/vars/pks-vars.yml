@@ -47,8 +47,8 @@ az1_name: AZ1
 az2_name: AZ2
 az3_name: AZ3
 properties_worker_max_in_flight: 1
-network_name: PKS3-MGMT
-service_network: PKS3-MGMT
+network_name: PKS-MGMT
+service_network: PKS-MGMT
 singleton_availability_zone: MGMT
 properties_cloud_provider_vsphere_vcenter_master_creds_identity: administrator@vsphere.local
 
