@@ -25,56 +25,56 @@ t0_nat_rules:
   source: Any
   dest: 192.168.105.15
   trans: 10.16.21.10
-  priority: 1000
+  priority: 1001
 - name: director-dnat # DNAT to reach BOSH Direector
   t0_name: tier0
   action: DNAT
   source: Any
   dest: 192.168.105.16
   trans: 10.16.21.12
-  priority: 1000
+  priority: 1001
 - name: PKS3-controller-dnat # DNAT to reach BOSH Direector
   t0_name: tier0
   action: DNAT
   source: Any
   dest: 192.168.105.17
   trans: 10.16.21.13
-  priority: 1000
+  priority: 1001
 - name: harbor-dnat # DNAT to reach BOSH Direector
   t0_name: tier0
   action: DNAT
   source: Any
   dest: 192.168.105.18
   trans: 10.16.21.14
-  priority: 1000
+  priority: 1001
 - name: infra-snat-mgmt # SNAT for infra network to reach DNS, vCenter, etc
   t0_name: tier0
   action: SNAT
   source: 10.16.21.0/24
   dest: 192.168.100.0/24
   trans: 192.168.105.4
-  priority: 1000
+  priority: 1001
 - name: infra-snat-esxi # SNAT for infra to reach ESXi hosts
   t0_name: tier0
   action: SNAT
   source: 10.16.21.0/24
   dest: 192.168.97.0/24
   trans: 192.168.105.4
-  priority: 1000
+  priority: 1001
 - name: nodes-snat-mgmt # SNAT for Nodes blockto reach DNS, NTP, etc
   t0_name: tier0
   action: SNAT
   source: 10.17.0.0/16
   dest: 192.168.100.0/24
   trans: 192.168.105.5
-  priority: 1000
+  priority: 1001
 - name: pods-snat-mgmt # SNAT for Nodes blockto reach DNS, NTP, etc
   t0_name: tier0
   action: SNAT
   source: 10.18.0.0/16
   dest: 192.168.100.0/24
   trans: 192.168.105.6
-  priority: 1000
+  priority: 1001
 
 ip_blocks:
 - name: PKS3-Nodes-Block
