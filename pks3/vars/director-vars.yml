@@ -13,9 +13,9 @@ vsphere_az3_cluster: WORK
 vsphere_az3_resource_pool: PKS
 vsphere_az3_host_group: HOST3
 pks_mgmt_network: PKS3-MGMT
-pks_mgmt_gateway: 10.16.11.1
-pks_mgmt_network_cidr: 10.16.11.0/24
-pks_mgmt_network_reserved: 10.16.11.1-10.16.11.11
+pks_mgmt_gateway: 10.16.21.1
+pks_mgmt_network_cidr: 10.16.21.0/24
+pks_mgmt_network_reserved: 10.16.21.1-10.16.21.11
 
 max_threads: 5
 vsphere_datastore: vsanDatastore

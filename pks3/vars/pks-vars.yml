@@ -8,7 +8,7 @@ properties_network_selector_nsx_nsx-t-superuser-certificate.private_key_pem: ((p
 properties_cloud_provider_vcenter_dc: attic
 properties_cloud_provider_vcenter_ds: vsanDatastore
 properties_cloud_provider_vcenter_ip: vcsa.ragazzilab.com
-properties_cloud_provider_vcenter_vms: WORK/PKS/VMs/
+properties_cloud_provider_vcenter_vms: WORK/PKS3/VMs/
 properties_network_selector: nsx
 properties_network_selector_nsx-t-host: nsxmgr.ragazzilab.com
 properties_network_selector_nsx_cloud-config-dns: 192.168.100.50,192.168.100.150
@@ -42,7 +42,7 @@ properties_pks-vrli_enabled: enabled
 properties_pks-vrli_enabled_host: syslog.ragazzilab.com
 properties_pks-vrli_enabled_skip_cert_verify: true
 properties_pks-vrops: disabled
-properties_pks_api_hostname: api.pks.ragazzilab.com
+properties_pks_api_hostname: api.pks3.ragazzilab.com
 az1_name: AZ1
 az2_name: AZ2
 az3_name: AZ3
