@@ -1,11 +1,11 @@
 vsphere_resource_pool: /attic/host/WORK/Resources/PKS3-MGMT #/LAB/host/attic/Resources/PKS3-MGMT # /<Data Center Name>/host/<Cluster Name>/Resources/<RP Name>
 opsman_vm_name: om-pks3
-opsman_private_ip: 10.16.21.10
+opsman_private_ip: 10.16.13.10
 opsman_netmask: 255.255.255.0
 vsphere_datastore: vsanDatastore
 vsphere_datacenter: attic
 infrastructure_network: PKS3-MGMT
-infrastructure_gateway: 10.16.21.1
+infrastructure_gateway: 10.16.13.1
 dns: 192.168.100.50,192.168.100.150
 ntp: 192.168.100.1
 vsphere_vms_folder: /attic/vm/WORK/PKS3/VMs/ #/LAB/vm/BOSH/PKS/VMs/
