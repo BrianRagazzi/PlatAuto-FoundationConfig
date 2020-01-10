@@ -1,5 +1,5 @@
 ---
-pivnet-api-token: ((internal_pivnet_token))
+pivnet-api-token: ((ivnet_token))
 pivnet-file-glob: "bosh-stemcell-*.tgz"
 pivnet-product-slug: stemcells-windows-server-internal
 product-version-regex: ^2019\.[0-9-]+
