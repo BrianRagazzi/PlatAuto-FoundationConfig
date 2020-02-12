@@ -46,7 +46,7 @@ properties_pks_api_hostname: api.pks.ragazzilab.com
 az1_name: AZ1
 az2_name: AZ2
 az3_name: AZ3
-properties_worker_max_in_flight: 1
+properties_worker_max_in_flight: 6
 network_name: PKS-MGMT
 service_network: PKS-MGMT
 singleton_availability_zone: MGMT
