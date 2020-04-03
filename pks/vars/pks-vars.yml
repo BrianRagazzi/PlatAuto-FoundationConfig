@@ -52,6 +52,8 @@ service_network: PKS-MGMT
 singleton_availability_zone: MGMT
 properties_cloud_provider_vsphere_vcenter_master_creds_identity: administrator@vsphere.local
 
+new_vm_type: '{"name": "4cpu.8ram.32disk","ram": 8192,"cpu": 4,"ephemeral_disk": 32768}'
+
 properties_plan1_selector_active_name: small
 properties_plan1_selector_value: "Plan Active"
 properties_plan1_selector_active_allow_privileged_containers: true
