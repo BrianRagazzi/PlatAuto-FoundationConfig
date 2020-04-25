@@ -4,7 +4,7 @@ local_users:
   emails: pks-admin # do not use domain registered with LDAP
   password: testpassword
 - name: pksadmin
-  emails: pksadmin # do not use domain registered with LDAP
+  emails:  # do not use domain registered with LDAP
   password: testpassword
 
 groups:
