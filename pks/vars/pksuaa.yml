@@ -1,10 +1,10 @@
 ---
 local_users:
 - name: pks-admin
-  emails: pks-admin@ragazzilab.com
+  emails: pks-admin # do not use domain registered with LDAP
   password: testpassword
 - name: pksadmin
-  emails: pksadmin@ragazzilab.com
+  emails: pksadmin # do not use domain registered with LDAP
   password: testpassword
 
 groups:
