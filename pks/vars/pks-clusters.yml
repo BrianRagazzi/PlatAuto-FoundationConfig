@@ -1,0 +1,8 @@
+client_name: concourse-to-pks
+client_secret: concourse #((uaa_concoursepks_secret))
+
+clusters:
+- name: mc1
+  num_nodes: 3
+- name: mc2
+  num_nodes: 1
