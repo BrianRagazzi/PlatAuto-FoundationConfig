@@ -10,3 +10,6 @@ clusters:
   num_nodes: 1
   plan: medium
   exthostname: mc2.pks.ragazzilab.com
+- name: autotest
+  num_nodes: 1
+  plan: small
