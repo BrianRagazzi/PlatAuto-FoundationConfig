@@ -16,5 +16,5 @@ clusters:
   exthostname: autotest.pks.ragazzilab.com
 - name: autotest2
   num_nodes: 3
-  plan: small
-  exthostname: 
+  plan: superlarge
+  exthostname:
