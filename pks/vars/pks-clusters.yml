@@ -13,3 +13,8 @@ clusters:
 - name: autotest
   num_nodes: 1
   plan: small
+  exthostname: autotest.pks.ragazzilab.com
+- name: autotest2
+  num_nodes: 3
+  plan: small
+  exthostname: 
