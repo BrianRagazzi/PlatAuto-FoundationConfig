@@ -107,7 +107,7 @@ product-properties:
     value: ((properties_plan1_selector_active_master_vm_type))
   .properties.plan1_selector.active.worker_vm_type:
     value: ((properties_plan1_selector_active_worker_vm_type))
-  .properties_plan1_selector.active.addons_spec:
+  .properties.plan1_selector.active.addons_spec:
     value: ((properties_plan1_selector_active_addons_spec))
 
   .properties.plan2_selector:
@@ -138,7 +138,7 @@ product-properties:
     value: ((properties_plan2_selector_active_master_vm_type))
   .properties.plan2_selector.active.worker_vm_type:
     value: ((properties_plan2_selector_active_worker_vm_type))
-  .properties_plan2_selector.active.addons_spec:
+  .properties.plan2_selector.active.addons_spec:
     value: ((properties_plan2_selector_active_addons_spec))
 
   .properties.plan3_selector:
@@ -169,7 +169,7 @@ product-properties:
     value: ((properties_plan3_selector_active_master_vm_type))
   .properties.plan3_selector.active.worker_vm_type:
     value: ((properties_plan3_selector_active_worker_vm_type))
-  .properties_plan3_selector.active.addons_spec:
+  .properties.plan3_selector.active.addons_spec:
     value: ((properties_plan3_selector_active_addons_spec))
 
 
