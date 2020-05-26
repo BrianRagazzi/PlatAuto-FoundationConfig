@@ -6,14 +6,14 @@ clusters:
   num_nodes: 3
   plan: medium
   exthostname: mc1.pks.ragazzilab.com
-- name: mc2
-  num_nodes: 1
-  plan: medium
-  exthostname: mc2.pks.ragazzilab.com
-# - name: autotest
+# - name: mc2
 #   num_nodes: 1
+#   plan: medium
+#   exthostname: mc2.pks.ragazzilab.com
+# - name: monitor
+#   num_nodes: 3
 #   plan: small
-#   exthostname: autotest.pks.ragazzilab.com
+#   exthostname: monitor.pks.ragazzilab.com
 # - name: autotest2
 #   num_nodes: 3
 #   plan: superlarge
