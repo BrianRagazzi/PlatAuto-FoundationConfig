@@ -57,7 +57,7 @@ new_vm_type: '{"name": "4cpu.8ram.32disk","ram": 8192,"cpu": 4,"ephemeral_disk":
 properties_plan1_selector_active_name: small
 properties_plan1_selector_value: "Plan Active"
 properties_plan1_selector_active_allow_privileged_containers: true
-properties_plan1_selector_active_description: "1 medium master, 1 medium worker"
+properties_plan1_selector_active_description: "1 medium.disk master, 1 medium.disk worker, LDAP & Syslog"
 properties_plan1_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan1_selector_active_master_instances: 1
 properties_plan1_selector_active_master_persistent_disk_type: "10240"
@@ -82,12 +82,22 @@ properties_plan1_selector_active_addons_spec: |
   - apiGroup: rbac.authorization.k8s.io
     kind: Group
     name: oidc:k8s-admin
+  ---
+  apiVersion: pksapi.io/v1beta1
+  kind: ClusterLogSink
+  metadata:
+     name: syslogsink
+  spec:
+     type: syslog
+     host: syslog.ragazzilab.com
+     port: 514
+     enable_tls: true
 
 
 properties_plan2_selector_active_name: medium
 properties_plan2_selector_value: "Plan Active"
 properties_plan2_selector_active_allow_privileged_containers: true
-properties_plan2_selector_active_description: "1 medium master, 3 large.disk workers"
+properties_plan2_selector_active_description: "1 medium.disk master, 3 large.disk workers, LDAP & Syslog"
 properties_plan2_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan2_selector_active_master_instances: 1
 properties_plan2_selector_active_master_persistent_disk_type: "10240"
@@ -112,11 +122,21 @@ properties_plan2_selector_active_addons_spec: |
   - apiGroup: rbac.authorization.k8s.io
     kind: Group
     name: oidc:k8s-admin
+  ---
+  apiVersion: pksapi.io/v1beta1
+  kind: ClusterLogSink
+  metadata:
+     name: syslogsink
+  spec:
+     type: syslog
+     host: syslog.ragazzilab.com
+     port: 514
+     enable_tls: true
 
 properties_plan3_selector_active_name: large
 properties_plan3_selector_value: "Plan Active"
 properties_plan3_selector_active_allow_privileged_containers: true
-properties_plan3_selector_active_description: "3 medium masters 3 large workers"
+properties_plan3_selector_active_description: "3 medium.disk masters 3 large.disk workers, LDAP & Syslog"
 properties_plan3_selector_active_master_az_placement: [AZ1,AZ2,AZ3]
 properties_plan3_selector_active_master_instances: 3
 properties_plan3_selector_active_master_persistent_disk_type: "10240"
@@ -141,7 +161,16 @@ properties_plan3_selector_active_addons_spec: |
   - apiGroup: rbac.authorization.k8s.io
     kind: Group
     name: oidc:k8s-admin
-
+  ---
+  apiVersion: pksapi.io/v1beta1
+  kind: ClusterLogSink
+  metadata:
+     name: syslogsink
+  spec:
+     type: syslog
+     host: syslog.ragazzilab.com
+     port: 514
+     enable_tls: true
 
 properties_plan4_selector_active_name: med-large
 properties_plan4_selector_value: "Plan Active"

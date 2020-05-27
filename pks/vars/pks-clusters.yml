@@ -10,10 +10,10 @@ clusters:
 #   num_nodes: 1
 #   plan: medium
 #   exthostname: mc2.pks.ragazzilab.com
-# - name: monitor
-#   num_nodes: 3
-#   plan: small
-#   exthostname: monitor.pks.ragazzilab.com
+- name: monitor
+  num_nodes: 3
+  plan: small
+  exthostname: monitor.pks.ragazzilab.com
 # - name: autotest2
 #   num_nodes: 3
 #   plan: superlarge
