@@ -2,15 +2,18 @@
 local_users:
 - name: pks-admin
   emails: pks-admin # do not use domain registered with LDAP
-  password: testpassword
+  password: testpassword  #move this to credhub
 - name: pksadmin
   emails:  # do not use domain registered with LDAP
-  password: testpassword
+  password: testpassword  #move this to credhub
 
 local_clients:
 - client_name: concourse-to-pks
-  client_secret: concourse  #move this credhub
+  client_secret: concourse  #move this to credhub
   authorities: "pks.clusters.admin,pks.clusters.manage"
+- client_name: pivotal-ingress
+  client_secret: ingress  #move this to credhub
+  authorities: "pks.clusters.admin"
 
 groups:
 - name: pks.clusters.admin
