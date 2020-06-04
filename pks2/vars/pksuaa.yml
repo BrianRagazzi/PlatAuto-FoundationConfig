@@ -1,0 +1,29 @@
+---
+local_users:
+- name: pks-admin
+  emails: pks-admin # do not use domain registered with LDAP
+  password: testpassword
+- name: pksadmin
+  emails:  # do not use domain registered with LDAP
+  password: testpassword
+
+local_clients:
+- client_name: concourse-to-pks
+  client_secret: concourse  #move this credhub
+  authorities: "pks.clusters.admin,pks.clusters.manage"
+
+groups:
+- name: pks.clusters.admin
+  group_maps:
+  - dn: "CN=PKS-admins,OU=Security Groups,DC=ragazzilab,DC=com"
+  members:
+  - name: admin
+  - name: pks-admin
+- name: pks.clusters.manage
+  group_maps:
+  - dn: "CN=PKS-admins,OU=Security Groups,DC=ragazzilab,DC=com"
+  members:
+  - name: admin
+  - name: pks-admin
+- name: pks.clusters.admin.read
+  group_maps:
